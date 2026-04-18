@@ -1,0 +1,96 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#00ADD8" font-size="22" font-weight="700">Go Toolchain — Visión General</text>
+  <line x1="120" y1="55" x2="780" y2="55" stroke="#1e3a4a" stroke-width="1"/>
+
+  <!-- Source code box -->
+  <rect x="60" y="80" width="160" height="64" rx="8" fill="#0f2535" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="140" y="106" text-anchor="middle" fill="#00ADD8" font-size="13" font-weight="600">Código fuente</text>
+  <text x="140" y="126" text-anchor="middle" fill="#8b949e" font-size="11">*.go</text>
+
+  <!-- Arrow: source → go run -->
+  <line x1="220" y1="112" x2="268" y2="112" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- go run -->
+  <rect x="268" y="80" width="130" height="64" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="333" y="106" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">go run</text>
+  <text x="333" y="126" text-anchor="middle" fill="#8b949e" font-size="11">compila + ejecuta</text>
+
+  <!-- Arrow: go run → output -->
+  <line x1="398" y1="112" x2="446" y2="112" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output terminal -->
+  <rect x="446" y="80" width="130" height="64" rx="8" fill="#0d2414" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="511" y="106" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">Salida</text>
+  <text x="511" y="126" text-anchor="middle" fill="#8b949e" font-size="11">stdout / stderr</text>
+
+  <!-- go build row -->
+  <!-- Arrow: source → go build -->
+  <line x1="140" y1="144" x2="140" y2="175" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="140" y1="175" x2="268" y2="175" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- go build -->
+  <rect x="268" y="155" width="130" height="64" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="333" y="181" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">go build</text>
+  <text x="333" y="201" text-anchor="middle" fill="#8b949e" font-size="11">genera binario</text>
+
+  <!-- Arrow: go build → binary -->
+  <line x1="398" y1="187" x2="446" y2="187" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Binary -->
+  <rect x="446" y="155" width="130" height="64" rx="8" fill="#1a1000" stroke="#d29922" stroke-width="1.5"/>
+  <text x="511" y="181" text-anchor="middle" fill="#d29922" font-size="13" font-weight="600">Binario</text>
+  <text x="511" y="201" text-anchor="middle" fill="#8b949e" font-size="11">ejecutable nativo</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="250" x2="780" y2="250" stroke="#1e3a4a" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="420" y="245" text-anchor="middle" fill="#30363d" font-size="10">Herramientas de calidad</text>
+
+  <!-- go fmt -->
+  <rect x="60" y="270" width="170" height="80" rx="8" fill="#161b22" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="145" y="296" text-anchor="middle" fill="#00ADD8" font-size="14" font-weight="700">go fmt</text>
+  <text x="145" y="318" text-anchor="middle" fill="#8b949e" font-size="11">formato único oficial</text>
+  <text x="145" y="336" text-anchor="middle" fill="#8b949e" font-size="11">tabs, sin debate de estilo</text>
+
+  <!-- go vet -->
+  <rect x="260" y="270" width="170" height="80" rx="8" fill="#161b22" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="345" y="296" text-anchor="middle" fill="#00ADD8" font-size="14" font-weight="700">go vet</text>
+  <text x="345" y="318" text-anchor="middle" fill="#8b949e" font-size="11">análisis estático</text>
+  <text x="345" y="336" text-anchor="middle" fill="#8b949e" font-size="11">detecta bugs probables</text>
+
+  <!-- go test -->
+  <rect x="460" y="270" width="170" height="80" rx="8" fill="#161b22" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="545" y="296" text-anchor="middle" fill="#00ADD8" font-size="14" font-weight="700">go test</text>
+  <text x="545" y="318" text-anchor="middle" fill="#8b949e" font-size="11">testing nativo</text>
+  <text x="545" y="336" text-anchor="middle" fill="#8b949e" font-size="11">-race para concurrencia</text>
+
+  <!-- go mod -->
+  <rect x="660" y="270" width="170" height="80" rx="8" fill="#161b22" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="745" y="296" text-anchor="middle" fill="#00ADD8" font-size="14" font-weight="700">go mod</text>
+  <text x="745" y="318" text-anchor="middle" fill="#8b949e" font-size="11">gestión de módulos</text>
+  <text x="745" y="336" text-anchor="middle" fill="#8b949e" font-size="11">init · tidy · get</text>
+
+  <!-- go.mod / go.sum section -->
+  <rect x="60" y="390" width="380" height="100" rx="8" fill="#0f1e0f" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="250" y="415" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">Módulo Go</text>
+  <text x="250" y="438" text-anchor="middle" fill="#8b949e" font-size="11">go.mod — declaración del módulo y versión de Go</text>
+  <text x="250" y="458" text-anchor="middle" fill="#8b949e" font-size="11">go.sum — hashes de seguridad de dependencias</text>
+  <text x="250" y="478" text-anchor="middle" fill="#8b949e" font-size="11">module github.com/usuario/proyecto</text>
+
+  <!-- zero values section -->
+  <rect x="470" y="390" width="360" height="100" rx="8" fill="#1a1000" stroke="#d29922" stroke-width="1.5"/>
+  <text x="650" y="415" text-anchor="middle" fill="#d29922" font-size="13" font-weight="600">Zero Values</text>
+  <text x="650" y="438" text-anchor="middle" fill="#8b949e" font-size="11">int → 0 · float64 → 0.0 · string → ""</text>
+  <text x="650" y="458" text-anchor="middle" fill="#8b949e" font-size="11">bool → false · pointer → nil</text>
+  <text x="650" y="478" text-anchor="middle" fill="#8b949e" font-size="11">nunca hay valores no inicializados</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#30363d"/>
+    </marker>
+  </defs>
+</svg>

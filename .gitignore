@@ -1,0 +1,52 @@
+# solution/ folders — instructor-only content
+bootcamp/**/3-proyecto/solution/
+
+# Go binaries and build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go module cache
+vendor/
+
+# Air (hot-reload) temp files
+tmp/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+*.swp
+*.swo
+*~
+
+# VS Code (keep .vscode/extensions.json and .vscode/settings.json)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# SQLite database files (generated at runtime)
+*.db
+*.db-shm
+*.db-wal
+
+# Compiled binary output
+/bin/
+/dist/
