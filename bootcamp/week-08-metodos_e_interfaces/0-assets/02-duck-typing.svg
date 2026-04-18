@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="28" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Duck Typing en Go — Interfaces Implícitas y Polimorfismo</text>
+
+  <!-- ===== INTERFACE en el centro ===== -->
+  <rect x="330" y="42" width="240" height="72" rx="5" fill="#181825" stroke="#00ADD8" stroke-width="2"/>
+  <text x="450" y="58" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">interface Describer</text>
+  <text x="450" y="74" text-anchor="middle" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Describer interface {</text>
+  <text x="450" y="88" text-anchor="middle" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Describir() string</text>
+  <text x="450" y="102" text-anchor="middle" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Flechas desde tipos hacia interface -->
+  <!-- Tipo A → interface -->
+  <line x1="195" y1="110" x2="330" y2="78" stroke="#a6e3a1" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Tipo B → interface -->
+  <line x1="450" y1="195" x2="450" y2="114" stroke="#f9e2af" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- Tipo C → interface -->
+  <line x1="710" y1="110" x2="570" y2="78" stroke="#cba6f7" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Texto de flecha -->
+  <text x="245" y="90" fill="#585b70" font-size="9" transform="rotate(-13,245,90)">satisface impl.</text>
+  <text x="454" y="165" fill="#585b70" font-size="9">satisface</text>
+  <text x="612" y="90" fill="#585b70" font-size="9" transform="rotate(13,612,90)">satisface impl.</text>
+
+  <!-- ===== TIPO A: Perro ===== -->
+  <rect x="10" y="125" width="255" height="120" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="20" y="141" fill="#a6e3a1" font-size="11" font-weight="bold">type Perro struct</text>
+  <text x="20" y="156" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Perro struct {</text>
+  <text x="20" y="170" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    nombre string</text>
+  <text x="20" y="184" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="20" y="198" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (p Perro) Describir() string {</text>
+  <text x="20" y="212" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return "Perro: " + p.nombre</text>
+  <text x="20" y="226" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="20" y="240" fill="#a6e3a1" font-size="10">✅ satisface Describer (tiene Describir)</text>
+
+  <!-- ===== TIPO B: int personalizado ===== -->
+  <rect x="325" y="200" width="250" height="120" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="335" y="216" fill="#f9e2af" font-size="11" font-weight="bold">type Temperatura float64</text>
+  <text x="335" y="231" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Temperatura float64</text>
+  <text x="335" y="245" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace"> </text>
+  <text x="335" y="259" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (t Temperatura) Describir() string {</text>
+  <text x="335" y="273" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return fmt.Sprintf("%.1f°C", float64(t))</text>
+  <text x="335" y="287" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="335" y="311" fill="#f9e2af" font-size="10">✅ satisface Describer — aunque no es struct</text>
+
+  <!-- ===== TIPO C: Libro ===== -->
+  <rect x="635" y="125" width="255" height="120" rx="3" fill="#181825" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="645" y="141" fill="#cba6f7" font-size="11" font-weight="bold">type Libro struct</text>
+  <text x="645" y="156" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Libro struct {</text>
+  <text x="645" y="170" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    titulo, autor string</text>
+  <text x="645" y="184" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="645" y="198" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (l Libro) Describir() string {</text>
+  <text x="645" y="212" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return l.titulo + " — " + l.autor</text>
+  <text x="645" y="226" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="645" y="240" fill="#cba6f7" font-size="10">✅ satisface Describer — tipos diferentes</text>
+
+  <!-- ===== FUNCIÓN POLIMÓRFICA ===== -->
+  <rect x="10" y="338" width="430" height="100" rx="3" fill="#181825" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="20" y="353" fill="#00ADD8" font-size="11" font-weight="bold">Función polimórfica — acepta cualquier Describer</text>
+  <text x="20" y="368" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func imprimir(d Describer) {</text>
+  <text x="20" y="382" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    fmt.Println(d.Describir())</text>
+  <text x="20" y="396" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="20" y="410" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">// funciona con cualquier tipo que satisfaga Describer</text>
+  <text x="20" y="424" fill="#cdd6f4" font-size="10">No sabe ni le importa si es Perro, Temperatura o Libro</text>
+
+  <!-- ===== USO EN MAIN ===== -->
+  <rect x="455" y="338" width="435" height="100" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="465" y="353" fill="#cba6f7" font-size="11" font-weight="bold">Uso en main()</text>
+  <text x="465" y="368" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">elementos := []Describer{</text>
+  <text x="465" y="382" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Perro{nombre: "Rex"},</text>
+  <text x="465" y="396" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Temperatura(36.6),</text>
+  <text x="465" y="410" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Libro{titulo: "Go", autor: "Donovan"},</text>
+  <text x="465" y="424" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- ===== PANEL INFERIOR ===== -->
+  <rect x="10" y="448" width="880" height="62" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="465" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Duck Typing: "Si camina como pato y grazna como pato, es un pato"</text>
+  <text x="28" y="482" fill="#a6e3a1" font-size="11">En Go: si un tipo tiene todos los métodos de la interface, la satisface — sin declararlo</text>
+  <text x="28" y="498" fill="#cdd6f4" font-size="11">No hay "implements Describer". El compilador verifica los métodos automáticamente.</text>
+</svg>

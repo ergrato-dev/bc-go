@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="28" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Method Sets en Go — Qué métodos puede llamar cada receptor</text>
+
+  <!-- Divisores verticales -->
+  <line x1="300" y1="40" x2="300" y2="415" stroke="#45475a" stroke-width="1"/>
+  <line x1="600" y1="40" x2="600" y2="415" stroke="#45475a" stroke-width="1"/>
+
+  <!-- ===== COL 1: Tipo T (valor) ===== -->
+  <rect x="10" y="40" width="288" height="22" rx="3" fill="#313244"/>
+  <text x="154" y="55" text-anchor="middle" fill="#a6e3a1" font-size="12" font-weight="bold">Receptor de valor — T</text>
+
+  <rect x="10" y="68" width="288" height="100" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="20" y="83" fill="#cba6f7" font-size="11" font-weight="bold">Definición</text>
+  <text x="20" y="97" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Contador struct { n int }</text>
+  <text x="20" y="111" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace"> </text>
+  <text x="20" y="125" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (c Contador) Valor() int {</text>
+  <text x="20" y="139" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return c.n</text>
+  <text x="20" y="153" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <rect x="10" y="174" width="288" height="72" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1"/>
+  <text x="20" y="189" fill="#a6e3a1" font-size="11" font-weight="bold">Method set de T (valor)</text>
+  <text x="20" y="204" fill="#cdd6f4" font-size="10">✅ Métodos con receptor T</text>
+  <text x="20" y="218" fill="#f38ba8" font-size="10">❌ Métodos con receptor *T</text>
+  <text x="20" y="234" fill="#585b70" font-size="10">El valor no tiene dirección garantizada</text>
+
+  <rect x="10" y="252" width="288" height="58" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="20" y="267" fill="#cba6f7" font-size="11" font-weight="bold">Uso</text>
+  <text x="20" y="282" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c := Contador{n: 5}</text>
+  <text x="20" y="296" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c.Valor() // ✅ OK</text>
+
+  <rect x="10" y="316" width="288" height="86" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="20" y="331" fill="#cba6f7" font-size="11" font-weight="bold">Interface satisfaction</text>
+  <text x="20" y="346" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Leible interface {</text>
+  <text x="20" y="360" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Valor() int</text>
+  <text x="20" y="374" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="20" y="388" fill="#a6e3a1" font-size="10">var _ Leible = Contador{} // ✅ compila</text>
+  <text x="20" y="400" fill="#a6e3a1" font-size="10">var _ Leible = &amp;Contador{} // ✅ también</text>
+
+  <!-- ===== COL 2: Tipo *T (puntero) ===== -->
+  <rect x="310" y="40" width="278" height="22" rx="3" fill="#313244"/>
+  <text x="449" y="55" text-anchor="middle" fill="#f9e2af" font-size="12" font-weight="bold">Receptor de puntero — *T</text>
+
+  <rect x="310" y="68" width="278" height="100" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="320" y="83" fill="#cba6f7" font-size="11" font-weight="bold">Definición</text>
+  <text x="320" y="97" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">// mismo Contador</text>
+  <text x="320" y="111" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace"> </text>
+  <text x="320" y="125" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (c *Contador) Incrementar() {</text>
+  <text x="320" y="139" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    c.n++</text>
+  <text x="320" y="153" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <rect x="310" y="174" width="278" height="72" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1"/>
+  <text x="320" y="189" fill="#f9e2af" font-size="11" font-weight="bold">Method set de *T (puntero)</text>
+  <text x="320" y="204" fill="#cdd6f4" font-size="10">✅ Métodos con receptor T</text>
+  <text x="320" y="218" fill="#cdd6f4" font-size="10">✅ Métodos con receptor *T</text>
+  <text x="320" y="234" fill="#585b70" font-size="10">*T siempre tiene dirección disponible</text>
+
+  <rect x="310" y="252" width="278" height="58" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="320" y="267" fill="#cba6f7" font-size="11" font-weight="bold">Uso</text>
+  <text x="320" y="282" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c := &amp;Contador{n: 5}</text>
+  <text x="320" y="296" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c.Incrementar() // ✅  c.Valor() // ✅</text>
+
+  <rect x="310" y="316" width="278" height="86" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="320" y="331" fill="#cba6f7" font-size="11" font-weight="bold">Interface satisfaction</text>
+  <text x="320" y="346" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Mutable interface {</text>
+  <text x="320" y="360" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    Incrementar()</text>
+  <text x="320" y="374" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="320" y="388" fill="#f38ba8" font-size="10">var _ Mutable = Contador{} // ❌ no compila</text>
+  <text x="320" y="400" fill="#f9e2af" font-size="10">var _ Mutable = &amp;Contador{} // ✅ sí compila</text>
+
+  <!-- ===== COL 3: fmt.Stringer ===== -->
+  <rect x="610" y="40" width="280" height="22" rx="3" fill="#313244"/>
+  <text x="750" y="55" text-anchor="middle" fill="#cba6f7" font-size="12" font-weight="bold">fmt.Stringer — interface canónica</text>
+
+  <rect x="610" y="68" width="280" height="86" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="620" y="83" fill="#cba6f7" font-size="11" font-weight="bold">Definida en package fmt</text>
+  <text x="620" y="97" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">// package fmt</text>
+  <text x="620" y="111" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Stringer interface {</text>
+  <text x="620" y="125" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    String() string</text>
+  <text x="620" y="139" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="620" y="153" fill="#cdd6f4" font-size="10">fmt.Println la usa automáticamente</text>
+
+  <rect x="610" y="160" width="280" height="100" rx="3" fill="#181825" stroke="#cba6f7" stroke-width="1"/>
+  <text x="620" y="175" fill="#cba6f7" font-size="11" font-weight="bold">Implementar Stringer</text>
+  <text x="620" y="189" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Punto struct{ X, Y int }</text>
+  <text x="620" y="203" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace"> </text>
+  <text x="620" y="217" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (p Punto) String() string {</text>
+  <text x="620" y="231" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return fmt.Sprintf("(%d,%d)",</text>
+  <text x="620" y="245" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">        p.X, p.Y)</text>
+  <text x="620" y="255" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <rect x="610" y="266" width="280" height="44" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="620" y="281" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">p := Punto{3, 4}</text>
+  <text x="620" y="295" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(p) // (3,4) ← usa String()</text>
+
+  <rect x="610" y="316" width="280" height="86" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="620" y="331" fill="#cba6f7" font-size="11" font-weight="bold">Verificación en tiempo de compilación</text>
+  <text x="620" y="346" fill="#cdd6f4" font-size="10">Patrón idiomático para verificar que</text>
+  <text x="620" y="360" fill="#cdd6f4" font-size="10">un tipo satisface una interface:</text>
+  <text x="620" y="374" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">// blank identifier — no asigna variable</text>
+  <text x="620" y="388" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">var _ fmt.Stringer = Punto{}</text>
+  <text x="620" y="400" fill="#585b70" font-size="10">Error de compilación si no satisface</text>
+
+  <!-- ===== PANEL INFERIOR ===== -->
+  <rect x="10" y="422" width="880" height="88" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="439" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Regla de oro de method sets</text>
+
+  <text x="28" y="456" fill="#a6e3a1" font-size="11">T (valor): solo puede usar métodos con receptor T</text>
+  <text x="28" y="471" fill="#f9e2af" font-size="11">*T (puntero): puede usar métodos con receptor T y con receptor *T</text>
+  <text x="28" y="486" fill="#f38ba8" font-size="11">⚠ Si una interface requiere un método de *T → solo *T la satisface, no T</text>
+  <text x="490" y="456" fill="#cba6f7" font-size="11">Interface de 1 método → poderosa y componible (io.Reader, fmt.Stringer)</text>
+  <text x="490" y="471" fill="#94e2d5" font-size="11">Interfaces se satisfacen implícitamente — no hay "implements" en Go</text>
+  <text x="490" y="486" fill="#585b70" font-size="11">var _ Interface = Tipo{} — verificación en tiempo de compilación</text>
+</svg>

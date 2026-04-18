@@ -134,16 +134,16 @@
 
 ## Semana 08 — Métodos e Interfaces
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de duck typing, struct satisfaciendo interface)
-- [ ] `1-teoria/01-metodos-y-method-sets.md`
-- [ ] `1-teoria/02-interfaces-implicitas.md`
-- [ ] `2-practicas/practica-01-metodos/`
-- [ ] `2-practicas/practica-02-interfaces/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (SVG de duck typing, struct satisfaciendo interface)
+- [x] `1-teoria/01-metodos-y-method-sets.md`
+- [x] `1-teoria/02-interfaces-implicitas.md`
+- [x] `2-practicas/practica-01-metodos/`
+- [x] `2-practicas/practica-02-interfaces/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
