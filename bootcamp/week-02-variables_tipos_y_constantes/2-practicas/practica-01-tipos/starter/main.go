@@ -1,9 +1,9 @@
+package main
 // Paquete main: punto de entrada de la práctica 01 — Tipos Básicos en Go
 //   Qué     → programa guiado para explorar el sistema de tipos de Go
 //   Para qué → aprender a declarar variables, observar zero values y convertir tipos
 //   Impacto  → descomenta cada sección siguiendo el README; go run . después de cada paso
 
-package main
 
 import "fmt"
 

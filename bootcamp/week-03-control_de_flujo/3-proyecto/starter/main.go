@@ -1,9 +1,9 @@
+package main
 // Paquete main: proyecto semana 03 — procesador de registros
 //   Qué     → clasificar y reportar elementos de un dominio usando control de flujo
 //   Para qué → integrar for range, switch, defer e if con inicialización
 //   Impacto  → adapta este programa a tu dominio asignado; los TODOs indican los puntos de cambio
 
-package main
 
 import "fmt"
 
@@ -17,9 +17,10 @@ import "fmt"
 // Item representa un elemento del catálogo del dominio asignado.
 // TODO: Renombra Item y sus campos según tu dominio
 // Ejemplos:
-//   Biblioteca:  type Book struct { Title, Author string; Pages int }
-//   Farmacia:    type Drug struct { Name string; Price float64; RequiresPrescription bool }
-//   Gimnasio:    type Equipment struct { Name string; Zone string; Available bool }
+//
+//	Biblioteca:  type Book struct { Title, Author string; Pages int }
+//	Farmacia:    type Drug struct { Name string; Price float64; RequiresPrescription bool }
+//	Gimnasio:    type Equipment struct { Name string; Zone string; Available bool }
 type Item struct {
 	Name     string
 	Category string

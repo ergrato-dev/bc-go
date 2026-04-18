@@ -1,9 +1,9 @@
+package main
 // Paquete main: proyecto semana 04 — procesador funcional
 //   Qué     → aplicar múltiples retornos, variádicas, closures y HOF
 //   Para qué → consolidar los patrones de funciones de Go en un programa real
 //   Impacto  → adapta este starter a tu dominio asignado; los TODOs marcan los puntos de cambio
 
-package main
 
 import (
 	"fmt"
@@ -18,8 +18,8 @@ import (
 // Obra representa un elemento del dominio (ejemplo: museo).
 // TODO: Cambiar nombre y campos según tu dominio asignado.
 type Obra struct {
-	ID       int
-	Nombre   string
+	ID        int
+	Nombre    string
 	Categoria string
 	// TODO: Agregar campos relevantes de tu dominio
 	// Ejemplo (Biblioteca): Autor string, Disponible bool
@@ -92,8 +92,9 @@ func agregarNotas(obra Obra, notas ...string) string {
 
 // clasificar determina el tipo de una obra según su categoría.
 // TODO: Cambiar los casos del switch para tu dominio
-//       Ej (Biblioteca): "ficcion", "no-ficcion", "referencia"
-//       Ej (Farmacia): "analgesico", "antibiotico", "vitamina"
+//
+//	Ej (Biblioteca): "ficcion", "no-ficcion", "referencia"
+//	Ej (Farmacia): "analgesico", "antibiotico", "vitamina"
 func clasificar(obra Obra) string {
 	switch obra.Categoria {
 	case "pintura", "escultura":
@@ -152,8 +153,8 @@ func main() {
 
 	// Simular registro de una nueva obra con ID generado
 	nuevaObra := Obra{
-		ID:       generarID(), // closure genera el siguiente ID
-		Nombre:   "Nueva Adquisición",
+		ID:        generarID(), // closure genera el siguiente ID
+		Nombre:    "Nueva Adquisición",
 		Categoria: "escultura",
 	}
 	// TODO: Reemplazar con lógica de registro de tu dominio

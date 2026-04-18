@@ -1,9 +1,9 @@
+package main
 // Paquete main: práctica 01 — Patrones de for
 //   Qué     → explorar los 4 patrones del bucle for en Go
 //   Para qué → dominar la única estructura de bucle del lenguaje
 //   Impacto  → Go no tiene while ni foreach; todo se expresa con for
 
-package main
 
 import "fmt"
 

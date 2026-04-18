@@ -1,9 +1,9 @@
+package main
 // Paquete main: punto de entrada de la práctica 02 — Constantes e iota en Go
 //   Qué     → programa guiado para explorar const, iota y patrones de flags
 //   Para qué → aprender a crear enumeraciones idiomáticas y flags combinables
 //   Impacto  → descomenta cada sección siguiendo el README; go run . después de cada paso
 
-package main
 
 import "fmt"
 

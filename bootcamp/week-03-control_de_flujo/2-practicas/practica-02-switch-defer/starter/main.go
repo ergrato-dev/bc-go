@@ -1,9 +1,9 @@
+package main
 // Paquete main: práctica 02 — switch y defer
 //   Qué     → explorar switch con múltiples valores por caso y el modelo LIFO de defer
 //   Para qué → dominar la selección de casos y la gestión idiomática de recursos
 //   Impacto  → switch no necesita break; defer garantiza limpieza incluso con errores
 
-package main
 
 import "fmt"
 

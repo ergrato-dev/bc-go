@@ -89,5 +89,5 @@ week-03-control_de_flujo/
 
 ## 🔗 Navegación
 
-← [Semana 02 — Variables, Tipos y Constantes](../week-02-variables_tipos_y_constantes/README.md)  
+← [Semana 02 — Variables, Tipos y Constantes](../week-02-variables_tipos_y_constantes/README.md)
 → [Semana 04 — Funciones](../week-04-funciones/README.md)

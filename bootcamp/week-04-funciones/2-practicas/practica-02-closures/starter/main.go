@@ -1,9 +1,9 @@
+package main
 // Paquete main: práctica 02 — Closures y Funciones de Orden Superior
 //   Qué     → construir closures y HOF en Go
 //   Para qué → encapsular estado, componer comportamiento y evitar repetición
 //   Impacto  → los closures son la base de middleware, callbacks y generadores
 
-package main
 
 import (
 	"fmt"

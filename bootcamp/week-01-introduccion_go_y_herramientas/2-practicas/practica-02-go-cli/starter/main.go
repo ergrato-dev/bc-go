@@ -1,10 +1,10 @@
+package main
 // Paquete main: qué  → punto de entrada del programa ejecutable.
 // Para qué → junto con func main(), indica al compilador que este directorio
 //
 //	produce un binario, no una librería.
 //
 // Impacto   → sin 'package main', go build no genera ningún ejecutable.
-package main
 
 // import: qué  → importa tres paquetes de la librería estándar.
 // Para qué → "fmt" para imprimir; "os" para leer argumentos del S.O.;

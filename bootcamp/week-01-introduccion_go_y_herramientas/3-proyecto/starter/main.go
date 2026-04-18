@@ -1,7 +1,7 @@
+package main
 // Paquete main: qué → punto de entrada del programa ejecutable.
 // Para qué → Go requiere 'package main' + 'func main()' para producir un binario.
 // Impacto   → sin esta declaración, 'go build' no genera un ejecutable.
-package main
 
 // import: qué → lista de paquetes de la librería estándar que usaremos.
 // Para qué → "fmt" provee funciones de formato/impresión;

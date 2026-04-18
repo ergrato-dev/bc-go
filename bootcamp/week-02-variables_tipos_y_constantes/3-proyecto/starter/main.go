@@ -1,9 +1,9 @@
+package main
 // Paquete main: punto de entrada del proyecto semana 02
 //   Qué     → catálogo de inventario con tipos, constantes e iota
 //   Para qué → aplicar el sistema de tipos de Go a un dominio real asignado
 //   Impacto  → adapta este archivo a tu dominio; los TODOs son los puntos de implementación
 
-package main
 
 import "fmt"
 

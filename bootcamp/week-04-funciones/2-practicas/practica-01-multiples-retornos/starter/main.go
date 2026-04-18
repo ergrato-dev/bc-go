@@ -1,9 +1,9 @@
+package main
 // Paquete main: práctica 01 — Múltiples Retornos y Variádicas
 //   Qué     → explorar los patrones de declaración de funciones en Go
 //   Para qué → dominar múltiples retornos, retornos nombrados y variádicas
 //   Impacto  → estos patrones son la base de toda la API estándar de Go
 
-package main
 
 import (
 	"fmt"

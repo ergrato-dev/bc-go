@@ -1,9 +1,9 @@
+package main
 // Paquete main: qué → declara que este archivo pertenece al programa ejecutable.
 // Para qué → Go requiere exactamente un 'package main' con 'func main()' por binario.
 // Impacto   → cambiar a otro nombre (ej. 'package utils') convertiría esto en librería,
 //
 //	no en ejecutable — 'go run' fallaría.
-package main
 
 // import: qué → importa "fmt", el paquete de formateo de la librería estándar.
 // Para qué → nos da Println, Printf y Sprintf sin necesidad de dependencias externas.
