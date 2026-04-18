@@ -26,7 +26,7 @@ fmt.Printf("App: %s | Puerto: %d | Timeout: %ds\n",
     appVersion, defaultPort, timeoutSecs)
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 1**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 1**.
 Ejecuta con: `go run .`
 
 ---
@@ -51,7 +51,7 @@ var c int64 = int64(typedMax) // ✅ requiere conversión
 fmt.Println(a, b, c)
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 2**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 2**.
 Ejecuta con: `go run .`
 
 ---
@@ -77,7 +77,7 @@ fmt.Printf("Estación actual: %d\n", current) // 2
 fmt.Printf("Tipo: %T\n", current)            // main.Season
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 3**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 3**.
 Ejecuta con: `go run .`
 
 ---
@@ -106,7 +106,7 @@ fmt.Printf("¿Puede leer?:    %v\n", editor&CanRead != 0)    // true
 fmt.Printf("¿Puede borrar?:  %v\n", editor&CanDelete != 0)  // false
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 4**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 4**.
 Ejecuta con: `go run .`
 
 ---

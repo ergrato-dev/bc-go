@@ -25,7 +25,7 @@ fmt.Printf("string:  %q (%T)\n", name,      name)
 fmt.Printf("bool:    %v (%T)\n", available, available)
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 1**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 1**.
 Ejecuta con: `go run .`
 
 ---
@@ -50,7 +50,7 @@ fmt.Printf("string zero:  %q\n", s) // %q muestra las comillas
 fmt.Printf("puntero zero: %v\n", p) // nil
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 2**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 2**.
 Ejecuta con: `go run .`
 
 ---
@@ -76,7 +76,7 @@ approximate := int(total)
 fmt.Printf("Aprox: %d\n", approximate) // 34
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 3**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 3**.
 Ejecuta con: `go run .`
 
 ---
@@ -103,7 +103,7 @@ fmt.Printf("%%c  → %c\n",   ch)   // G
 fmt.Printf("%%q  → %q\n",   msg)  // "Hola, Go"
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 4**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 4**.
 Ejecuta con: `go run .`
 
 ---
@@ -127,7 +127,7 @@ for i, r := range greeting {
 }
 ```
 
-**Abre `starter/main.go`** y descomenta la sección **PASO 5**.  
+**Abre `starter/main.go`** y descomenta la sección **PASO 5**.
 Ejecuta con: `go run .`
 
 ---

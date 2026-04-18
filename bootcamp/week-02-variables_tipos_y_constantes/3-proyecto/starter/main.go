@@ -34,9 +34,10 @@ const maxCapacity = 500
 // Category representa el tipo de elemento en el catálogo.
 // TODO: Renombra Category y sus valores según tu dominio
 // Ejemplos:
-//   Biblioteca:  type Genre int   — Fiction, NonFiction, Reference, Periodical
-//   Farmacia:    type DrugType int — OTC, Prescription, Controlled
-//   Gimnasio:    type Equipment int — Cardio, Strength, Flexibility, Recovery
+//
+//	Biblioteca:  type Genre int   — Fiction, NonFiction, Reference, Periodical
+//	Farmacia:    type DrugType int — OTC, Prescription, Controlled
+//	Gimnasio:    type Equipment int — Cardio, Strength, Flexibility, Recovery
 type Category int
 
 // TODO: Reemplaza los valores con las categorías de tu dominio (mínimo 3)
