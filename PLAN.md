@@ -1,6 +1,6 @@
 # Plan de Trabajo — bc-go Bootcamp
 
-> Actualizado: 2026-04-18 — banner SVG creado; comentarios académicos aplicados a semana 01
+> Actualizado: 2026-04-19 — semana 01 completa (teoría, prácticas, recursos, glosario, rúbrica)
 
 ---
 
@@ -24,20 +24,20 @@
 ## Semana 01 — Introducción a Go y Herramientas
 
 - [x] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
+- [x] `rubrica-evaluacion.md`
 - [x] `0-assets/go-toolchain-overview.svg`
 - [x] `1-teoria/introduccion-go.md` (≥150 líneas, SVG vinculado)
-- [ ] `1-teoria/02-modulos-y-paquetes.md` (≥150 líneas, SVG vinculado)
+- [x] `1-teoria/02-modulos-y-paquetes.md` (≥150 líneas, SVG vinculado)
 - [x] `2-practicas/practica-01-hola-go/README.md`
 - [x] `2-practicas/practica-01-hola-go/starter/main.go`
-- [ ] `2-practicas/practica-02-go-cli/README.md`
-- [ ] `2-practicas/practica-02-go-cli/starter/main.go`
+- [x] `2-practicas/practica-02-go-cli/README.md`
+- [x] `2-practicas/practica-02-go-cli/starter/main.go`
 - [x] `3-proyecto/README.md`
 - [x] `3-proyecto/starter/main.go`
-- [ ] `4-recursos/ebooks-free/README.md`
-- [ ] `4-recursos/videografia/README.md`
-- [ ] `4-recursos/webgrafia/README.md`
-- [ ] `5-glosario/README.md`
+- [x] `4-recursos/ebooks-free/README.md`
+- [x] `4-recursos/videografia/README.md`
+- [x] `4-recursos/webgrafia/README.md`
+- [x] `5-glosario/README.md`
 
 ---
 

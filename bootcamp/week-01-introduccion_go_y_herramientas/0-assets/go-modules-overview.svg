@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="860" height="480" viewBox="0 0 860 480"
+     role="img" aria-label="Diagrama de módulos y paquetes en Go: relación entre módulo, paquetes y visibilidad">
+
+  <!-- ── Fondo ─────────────────────────────────────────── -->
+  <rect width="860" height="480" fill="#0d1117" rx="12"/>
+
+  <!-- ── Título ─────────────────────────────────────────── -->
+  <text x="430" y="38"
+        font-family="Inter, 'Open Sans', sans-serif"
+        font-size="15" font-weight="700"
+        fill="#e6edf3" text-anchor="middle">
+    Módulos y Paquetes en Go
+  </text>
+  <rect x="280" y="48" width="300" height="2" rx="1" fill="#00ADD8"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       MÓDULO (caja exterior — todo el módulo)
+  ══════════════════════════════════════════════════════════ -->
+  <rect x="30" y="66" width="800" height="390" rx="10"
+        fill="#0f2535" stroke="#00ADD8" stroke-width="2"/>
+
+  <!-- Etiqueta módulo -->
+  <rect x="30" y="56" width="220" height="26" rx="5" fill="#00ADD8"/>
+  <text x="140" y="74"
+        font-family="'JetBrains Mono', 'Fira Code', monospace"
+        font-size="12" font-weight="700"
+        fill="#0d1117" text-anchor="middle">
+    module github.com/user/app
+  </text>
+  <!-- go.mod badge -->
+  <rect x="260" y="56" width="72" height="26" rx="5"
+        fill="#0f2535" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="296" y="74"
+        font-family="'JetBrains Mono', monospace"
+        font-size="11" fill="#00ADD8" text-anchor="middle">go.mod</text>
+
+  <!-- Descripción módulo -->
+  <text x="430" y="102"
+        font-family="Inter, sans-serif" font-size="11"
+        fill="#7d8590" text-anchor="middle">
+    Un módulo = una unidad de versión y distribución. Define dependencias en go.mod.
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       PAQUETE main (izquierda)
+  ══════════════════════════════════════════════════════════ -->
+  <rect x="55" y="118" width="225" height="310" rx="8"
+        fill="#080f1a" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="55" y="118" width="225" height="32" rx="8" fill="#1c2733"/>
+  <rect x="55" y="138" width="225" height="12" fill="#1c2733"/>
+  <text x="167" y="139"
+        font-family="'JetBrains Mono', monospace"
+        font-size="12" font-weight="700"
+        fill="#d2a8ff" text-anchor="middle">package main</text>
+
+  <!-- Archivo main.go -->
+  <rect x="72" y="164" width="190" height="28" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="167" y="183"
+        font-family="'JetBrains Mono', monospace"
+        font-size="11" fill="#7d8590" text-anchor="middle">📄 main.go</text>
+
+  <!-- func main -->
+  <rect x="72" y="204" width="190" height="44" rx="4" fill="#0f2535" stroke="#00ADD8" stroke-width="1"/>
+  <text x="83" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#ff7b72">func</text>
+  <text x="115" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#d2a8ff">main</text>
+  <text x="147" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#e6edf3">() {</text>
+  <text x="83" y="239"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#6e7681">  // punto de entrada</text>
+
+  <!-- Nota ejecutable -->
+  <rect x="72" y="260" width="190" height="30" rx="4" fill="#1a2e1a" stroke="#3fb950" stroke-width="1"/>
+  <text x="167" y="278"
+        font-family="Inter, sans-serif"
+        font-size="10.5" fill="#3fb950" text-anchor="middle">✓ produce binario ejecutable</text>
+
+  <!-- import block -->
+  <rect x="72" y="302" width="190" height="56" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="83" y="320"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#ff7b72">import</text>
+  <text x="83" y="337"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#a5d6ff">  "fmt"</text>
+  <text x="83" y="353"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#a5d6ff">  "myapp/utils"</text>
+
+  <text x="167" y="398"
+        font-family="Inter, sans-serif" font-size="10" fill="#7d8590" text-anchor="middle">
+    punto de entrada del programa
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       PAQUETE utils (centro)
+  ══════════════════════════════════════════════════════════ -->
+  <rect x="317" y="118" width="225" height="310" rx="8"
+        fill="#080f1a" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="317" y="118" width="225" height="32" rx="8" fill="#1c2733"/>
+  <rect x="317" y="138" width="225" height="12" fill="#1c2733"/>
+  <text x="429" y="139"
+        font-family="'JetBrains Mono', monospace"
+        font-size="12" font-weight="700"
+        fill="#d2a8ff" text-anchor="middle">package utils</text>
+
+  <!-- Archivo utils.go -->
+  <rect x="334" y="164" width="190" height="28" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="429" y="183"
+        font-family="'JetBrains Mono', monospace"
+        font-size="11" fill="#7d8590" text-anchor="middle">📄 utils.go</text>
+
+  <!-- Exported function (pública) -->
+  <rect x="334" y="204" width="190" height="44" rx="4" fill="#1a2e1a" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="345" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#ff7b72">func</text>
+  <text x="378" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#3fb950" font-weight="700">Greet</text>
+  <text x="413" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#e6edf3">(s string)</text>
+  <text x="345" y="239"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#6e7681">  // PascalCase = pública ↑</text>
+
+  <!-- Unexported function (privada) -->
+  <rect x="334" y="260" width="190" height="44" rx="4" fill="#2e1a1a" stroke="#f85149" stroke-width="1.5"/>
+  <text x="345" y="277"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#ff7b72">func</text>
+  <text x="378" y="277"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#f85149">helper</text>
+  <text x="422" y="277"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10.5" fill="#e6edf3">() {</text>
+  <text x="345" y="295"
+        font-family="'JetBrains Mono', monospace"
+        font-size="10" fill="#6e7681">  // camelCase = privada ↓</text>
+
+  <text x="429" y="360"
+        font-family="Inter, sans-serif" font-size="10" fill="#7d8590" text-anchor="middle">
+    reutilizable dentro del módulo
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       DEPENDENCIA EXTERNA (derecha)
+  ══════════════════════════════════════════════════════════ -->
+  <rect x="579" y="118" width="225" height="310" rx="8"
+        fill="#080f1a" stroke="#30363d" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="579" y="118" width="225" height="32" rx="8" fill="#1c2733"/>
+  <rect x="579" y="138" width="225" height="12" fill="#1c2733"/>
+  <text x="691" y="139"
+        font-family="'JetBrains Mono', monospace"
+        font-size="11" font-weight="700"
+        fill="#7d8590" text-anchor="middle">dependencia externa</text>
+
+  <!-- go.sum badge -->
+  <rect x="596" y="164" width="190" height="28" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="691" y="183"
+        font-family="'JetBrains Mono', monospace"
+        font-size="11" fill="#7d8590" text-anchor="middle">📄 go.sum</text>
+
+  <!-- Contenido go.sum -->
+  <rect x="596" y="204" width="190" height="80" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="607" y="221"
+        font-family="'JetBrains Mono', monospace"
+        font-size="9.5" fill="#7d8590">github.com/user/lib</text>
+  <text x="607" y="237"
+        font-family="'JetBrains Mono', monospace"
+        font-size="9.5" fill="#a5d6ff">  v1.2.3</text>
+  <text x="607" y="253"
+        font-family="'JetBrains Mono', monospace"
+        font-size="9" fill="#6e7681">  h1:abc123...sha256</text>
+  <text x="607" y="272"
+        font-family="Inter, sans-serif"
+        font-size="9.5" fill="#7d8590">hash de integridad criptográfica</text>
+
+  <text x="691" y="340"
+        font-family="Inter, sans-serif" font-size="10" fill="#7d8590" text-anchor="middle">
+    descargada por go get
+  </text>
+  <text x="691" y="356"
+        font-family="Inter, sans-serif" font-size="10" fill="#7d8590" text-anchor="middle">
+    verificada con go.sum
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       FLECHAS de dependencia
+  ══════════════════════════════════════════════════════════ -->
+  <!-- main → utils -->
+  <defs>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6"
+            refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00ADD8"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="8" markerHeight="6"
+            refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7d8590"/>
+    </marker>
+  </defs>
+
+  <line x1="282" y1="274" x2="312" y2="274"
+        stroke="#00ADD8" stroke-width="2"
+        stroke-dasharray="0"
+        marker-end="url(#arr-blue)"/>
+  <text x="297" y="267"
+        font-family="Inter, sans-serif" font-size="9"
+        fill="#00ADD8" text-anchor="middle">import</text>
+
+  <!-- utils → go.sum (externa) -->
+  <line x1="545" y1="274" x2="574" y2="274"
+        stroke="#7d8590" stroke-width="1.5"
+        stroke-dasharray="5,3"
+        marker-end="url(#arr-gray)"/>
+  <text x="560" y="267"
+        font-family="Inter, sans-serif" font-size="9"
+        fill="#7d8590" text-anchor="middle">go get</text>
+
+  <!-- ══════════════════════════════════════════════════════
+       LEYENDA VISIBILIDAD
+  ══════════════════════════════════════════════════════════ -->
+  <rect x="55" y="440" width="750" height="26" rx="5"
+        fill="#0f2535" stroke="#30363d" stroke-width="1"/>
+
+  <circle cx="82" cy="453" r="5" fill="#3fb950"/>
+  <text x="92" y="457"
+        font-family="Inter, sans-serif" font-size="10.5"
+        fill="#e6edf3">PascalCase = exportado (público fuera del paquete)</text>
+
+  <circle cx="380" cy="453" r="5" fill="#f85149"/>
+  <text x="390" y="457"
+        font-family="Inter, sans-serif" font-size="10.5"
+        fill="#e6edf3">camelCase = no exportado (privado al paquete)</text>
+
+</svg>
