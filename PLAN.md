@@ -1,0 +1,333 @@
+# Plan de Trabajo — bc-go Bootcamp
+
+> Actualizado: 2026-04-18
+
+---
+
+## Infraestructura del repositorio
+
+- [x] `README.md` principal (índice de 20 semanas, stack, quick start)
+- [x] `.gitignore` (Go + solution/ ocultos)
+- [x] `LICENSE` (CC BY-NC-SA 4.0)
+- [x] `.vscode/extensions.json` y `settings.json`
+- [x] `.github/copilot-instructions.md`
+- [x] `.github/instructions/go-conventions.instructions.md`
+- [x] `.github/instructions/teoria-conventions.instructions.md`
+- [x] `.github/prompts/nueva-semana.prompt.md`
+- [x] `.github/prompts/nuevo-ejercicio.prompt.md`
+- [x] `.github/prompts/nuevo-proyecto.prompt.md`
+- [x] `.github/prompts/nuevo-asset-svg.prompt.md`
+
+---
+
+## Semana 01 — Introducción a Go y Herramientas
+
+- [x] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [x] `0-assets/go-toolchain-overview.svg`
+- [x] `1-teoria/introduccion-go.md` (≥150 líneas, SVG vinculado)
+- [ ] `1-teoria/02-modulos-y-paquetes.md` (≥150 líneas, SVG vinculado)
+- [x] `2-practicas/practica-01-hola-go/README.md`
+- [x] `2-practicas/practica-01-hola-go/starter/main.go`
+- [ ] `2-practicas/practica-02-go-cli/README.md`
+- [ ] `2-practicas/practica-02-go-cli/starter/main.go`
+- [x] `3-proyecto/README.md`
+- [x] `3-proyecto/starter/main.go`
+- [ ] `4-recursos/ebooks-free/README.md`
+- [ ] `4-recursos/videografia/README.md`
+- [ ] `4-recursos/webgrafia/README.md`
+- [ ] `5-glosario/README.md`
+
+---
+
+## Semana 02 — Variables, Tipos y Constantes
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de tipos básicos, zero values)
+- [ ] `1-teoria/01-tipos-basicos-y-zero-values.md`
+- [ ] `1-teoria/02-constantes-e-iota.md`
+- [ ] `2-practicas/practica-01-tipos/`
+- [ ] `2-practicas/practica-02-iota/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 03 — Control de Flujo
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de flujo if/for/switch/defer)
+- [ ] `1-teoria/01-if-y-for.md`
+- [ ] `1-teoria/02-switch-y-defer.md`
+- [ ] `2-practicas/practica-01-for/`
+- [ ] `2-practicas/practica-02-switch-defer/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 04 — Funciones
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de funciones first-class, closures)
+- [ ] `1-teoria/01-funciones-y-multiples-retornos.md`
+- [ ] `1-teoria/02-closures-y-funciones-de-orden-superior.md`
+- [ ] `2-practicas/practica-01-multiples-retornos/`
+- [ ] `2-practicas/practica-02-closures/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 05 — Arrays y Slices
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de slice header + backing array)
+- [ ] `1-teoria/01-arrays.md`
+- [ ] `1-teoria/02-slices-internals.md`
+- [ ] `2-practicas/practica-01-arrays/`
+- [ ] `2-practicas/practica-02-slices/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 06 — Maps y Structs
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de maps y structs con campos)
+- [ ] `1-teoria/01-maps.md`
+- [ ] `1-teoria/02-structs-y-metodos-de-valor.md`
+- [ ] `2-practicas/practica-01-maps/`
+- [ ] `2-practicas/practica-02-structs/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 07 — Punteros
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de stack/heap, valor vs referencia)
+- [ ] `1-teoria/01-punteros-y-referencias.md`
+- [ ] `1-teoria/02-paso-por-valor-vs-puntero.md`
+- [ ] `2-practicas/practica-01-punteros/`
+- [ ] `2-practicas/practica-02-new/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 08 — Métodos e Interfaces
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de duck typing, struct satisfaciendo interface)
+- [ ] `1-teoria/01-metodos-y-method-sets.md`
+- [ ] `1-teoria/02-interfaces-implicitas.md`
+- [ ] `2-practicas/practica-01-metodos/`
+- [ ] `2-practicas/practica-02-interfaces/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 09 — Composición y Embedding
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de composición vs herencia)
+- [ ] `1-teoria/01-embedding.md`
+- [ ] `1-teoria/02-type-assertions-y-type-switches.md`
+- [ ] `2-practicas/practica-01-embedding/`
+- [ ] `2-practicas/practica-02-type-assertions/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 10 — Manejo de Errores
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de error wrapping chain)
+- [ ] `1-teoria/01-error-interface.md`
+- [ ] `1-teoria/02-errores-custom-y-wrapping.md`
+- [ ] `2-practicas/practica-01-error-handling/`
+- [ ] `2-practicas/practica-02-custom-errors/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 11 — Paquetes y Módulos
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de go mod graph)
+- [ ] `1-teoria/01-paquetes-y-visibilidad.md`
+- [ ] `1-teoria/02-go-mod-y-go-sum.md`
+- [ ] `2-practicas/practica-01-paquetes/`
+- [ ] `2-practicas/practica-02-go-mod/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 12 — I/O, Archivos y JSON
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de io.Reader/Writer pipeline)
+- [ ] `1-teoria/01-io-y-archivos.md`
+- [ ] `1-teoria/02-json-marshal-unmarshal.md`
+- [ ] `2-practicas/practica-01-archivos/`
+- [ ] `2-practicas/practica-02-json/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 13 — Testing
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de test pyramid, table-driven tests)
+- [ ] `1-teoria/01-testing-package.md`
+- [ ] `1-teoria/02-table-driven-tests-y-benchmarks.md`
+- [ ] `2-practicas/practica-01-unit-tests/`
+- [ ] `2-practicas/practica-02-testify/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 14 — Goroutines y el Runtime
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de M:N scheduler G/M/P)
+- [ ] `1-teoria/01-goroutines.md`
+- [ ] `1-teoria/02-runtime-y-gomaxprocs.md`
+- [ ] `2-practicas/practica-01-goroutines/`
+- [ ] `2-practicas/practica-02-waitgroup/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 15 — Channels
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de buffered vs unbuffered channel)
+- [ ] `1-teoria/01-channels.md`
+- [ ] `1-teoria/02-directional-channels-y-range.md`
+- [ ] `2-practicas/practica-01-channels/`
+- [ ] `2-practicas/practica-02-pipeline/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 16 — Select y Sync
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de select, mutex, rwmutex)
+- [ ] `1-teoria/01-select.md`
+- [ ] `1-teoria/02-sync-mutex-waitgroup-once.md`
+- [ ] `2-practicas/practica-01-select/`
+- [ ] `2-practicas/practica-02-mutex/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 17 — Patrones de Concurrencia
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de worker pool, fan-in/fan-out)
+- [ ] `1-teoria/01-worker-pools-y-pipelines.md`
+- [ ] `1-teoria/02-context-y-cancelacion.md`
+- [ ] `2-practicas/practica-01-worker-pool/`
+- [ ] `2-practicas/practica-02-context/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 18 — net/http y Handlers
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de request/response HTTP flow)
+- [ ] `1-teoria/01-net-http-handlers.md`
+- [ ] `1-teoria/02-middleware-y-servemux.md`
+- [ ] `2-practicas/practica-01-handlers/`
+- [ ] `2-practicas/practica-02-middleware/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 19 — REST APIs con chi y database/sql
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de arquitectura REST: router → handler → DB)
+- [ ] `1-teoria/01-chi-router-y-json-api.md`
+- [ ] `1-teoria/02-database-sql-y-sqlite.md`
+- [ ] `2-practicas/practica-01-crud-api/`
+- [ ] `2-practicas/practica-02-database-sql/`
+- [ ] `3-proyecto/`
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Semana 20 — Docker, CI/CD y Proyecto Final
+
+- [ ] `README.md` de la semana
+- [ ] `rubrica-evaluacion.md`
+- [ ] `0-assets/` (SVG de pipeline CI/CD)
+- [ ] `1-teoria/01-docker-y-dockerfile.md`
+- [ ] `1-teoria/02-ci-cd-github-actions.md`
+- [ ] `2-practicas/practica-01-docker/`
+- [ ] `2-practicas/practica-02-github-actions/`
+- [ ] `3-proyecto/` (proyecto final integrador)
+- [ ] `4-recursos/`
+- [ ] `5-glosario/`
+
+---
+
+## Leyenda
+
+| Estado | Significado |
+|--------|-------------|
+| `[x]`  | Completado y en el repo |
+| `[ ]`  | Pendiente |
