@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="30" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Maps en Go — Tabla Hash, Acceso y Patrones</text>
+
+  <!-- Divisores -->
+  <line x1="300" y1="45" x2="300" y2="420" stroke="#45475a" stroke-width="1"/>
+  <line x1="600" y1="45" x2="600" y2="420" stroke="#45475a" stroke-width="1"/>
+
+  <!-- ===================== COL 1: ESTRUCTURA INTERNA ===================== -->
+  <rect x="12" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="150" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Estructura interna (tabla hash)</text>
+
+  <!-- Diagrama hash table -->
+  <text x="20" y="84" fill="#94e2d5" font-size="11" font-family="'Roboto Mono', 'Courier New', monospace">m := map[string]int{"a": 1, "b": 2}</text>
+
+  <!-- Buckets -->
+  <text x="20" y="106" fill="#a6e3a1" font-size="11">hash("a") → bucket 2</text>
+  <text x="20" y="120" fill="#a6e3a1" font-size="11">hash("b") → bucket 5</text>
+
+  <!-- Tabla hash visual -->
+  <text x="20" y="142" fill="#585b70" font-size="10">Buckets:</text>
+  <rect x="20" y="148" width="60" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="50" y="163" text-anchor="middle" fill="#585b70" font-size="10">0: nil</text>
+  <rect x="20" y="174" width="60" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="50" y="189" text-anchor="middle" fill="#585b70" font-size="10">1: nil</text>
+  <rect x="20" y="200" width="60" height="22" rx="2" fill="#313244" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="50" y="215" text-anchor="middle" fill="#00ADD8" font-size="10">2: "a"→1</text>
+  <rect x="20" y="226" width="60" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="50" y="241" text-anchor="middle" fill="#585b70" font-size="10">3: nil</text>
+  <rect x="20" y="252" width="60" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="50" y="267" text-anchor="middle" fill="#585b70" font-size="10">4: nil</text>
+  <rect x="20" y="278" width="60" height="22" rx="2" fill="#313244" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="50" y="293" text-anchor="middle" fill="#00ADD8" font-size="10">5: "b"→2</text>
+  <rect x="20" y="304" width="60" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="50" y="319" text-anchor="middle" fill="#585b70" font-size="10">6: nil</text>
+
+  <!-- Propiedades -->
+  <text x="95" y="163" fill="#f9e2af" font-size="10">Acceso O(1) promedio</text>
+  <text x="95" y="180" fill="#cdd6f4" font-size="10">Sin orden garantizado</text>
+  <text x="95" y="196" fill="#cdd6f4" font-size="10">Crece dinámicamente</text>
+  <text x="95" y="212" fill="#f38ba8" font-size="10">No concurrente por defecto</text>
+  <text x="95" y="228" fill="#cdd6f4" font-size="10">Clave debe ser comparable</text>
+  <text x="95" y="244" fill="#cdd6f4" font-size="10">Valor puede ser cualquier tipo</text>
+
+  <!-- Tipos de claves válidas -->
+  <text x="20" y="346" fill="#cba6f7" font-size="11">Claves válidas (comparables):</text>
+  <text x="20" y="362" fill="#a6e3a1" font-size="10">✓ string, int, float64, bool</text>
+  <text x="20" y="378" fill="#a6e3a1" font-size="10">✓ arrays ([3]int, [2]string)</text>
+  <text x="20" y="394" fill="#a6e3a1" font-size="10">✓ structs con campos comparables</text>
+  <text x="20" y="410" fill="#f38ba8" font-size="10">✗ slices, maps, funciones</text>
+
+  <!-- ===================== COL 2: OPERACIONES ===================== -->
+  <rect x="312" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="450" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Operaciones fundamentales</text>
+
+  <!-- make -->
+  <rect x="312" y="76" width="276" height="48" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="322" y="91" fill="#cba6f7" font-size="11" font-weight="bold">Crear con make (recomendado)</text>
+  <text x="322" y="107" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">edades := make(map[string]int)</text>
+  <text x="322" y="118" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">stock  := map[string]int{"libro": 3}</text>
+
+  <!-- Asignar / Leer -->
+  <rect x="312" y="132" width="276" height="64" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="322" y="147" fill="#cba6f7" font-size="11" font-weight="bold">Escribir y leer</text>
+  <text x="322" y="162" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">edades["Ana"] = 28   // escribir</text>
+  <text x="322" y="176" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">n := edades["Ana"]   // leer → 28</text>
+  <text x="322" y="190" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">x := edades["X"]     // no existe → 0</text>
+
+  <!-- Patrón v, ok -->
+  <rect x="312" y="204" width="276" height="70" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="322" y="219" fill="#f9e2af" font-size="11" font-weight="bold">★ Patrón v, ok — clave puede existir</text>
+  <text x="322" y="234" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">v, ok := edades["Ana"]</text>
+  <text x="322" y="249" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">if !ok {</text>
+  <text x="322" y="264" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    fmt.Println("clave no existe")</text>
+  <text x="322" y="269" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- delete y range -->
+  <rect x="312" y="282" width="276" height="58" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="322" y="297" fill="#cba6f7" font-size="11" font-weight="bold">Eliminar e iterar</text>
+  <text x="322" y="312" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">delete(edades, "Ana")</text>
+  <text x="322" y="327" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">for nombre, edad := range edades {</text>
+  <text x="322" y="332" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    fmt.Println(nombre, edad)</text>
+  <text x="322" y="337" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Set pattern -->
+  <rect x="312" y="348" width="276" height="62" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="322" y="363" fill="#cba6f7" font-size="11" font-weight="bold">Map como conjunto (set)</text>
+  <text x="322" y="378" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">visto := make(map[string]bool)</text>
+  <text x="322" y="393" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">visto["go"] = true</text>
+  <text x="322" y="408" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">if visto["go"] { /* ya procesado */ }</text>
+
+  <!-- ===================== COL 3: PATRONES ===================== -->
+  <rect x="612" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="750" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Patrones idiomáticos</text>
+
+  <!-- Frecuencias -->
+  <rect x="612" y="76" width="276" height="80" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="622" y="91" fill="#cba6f7" font-size="11" font-weight="bold">Contador de frecuencias</text>
+  <text x="622" y="106" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">freq := make(map[string]int)</text>
+  <text x="622" y="120" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">for _, palabra := range palabras {</text>
+  <text x="622" y="134" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    freq[palabra]++</text>
+  <text x="622" y="148" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Índice map[id]Struct -->
+  <rect x="612" y="164" width="276" height="80" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="622" y="179" fill="#a6e3a1" font-size="11" font-weight="bold">Índice map[ID]Struct — búsqueda O(1)</text>
+  <text x="622" y="194" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">type Producto struct { ID int; ... }</text>
+  <text x="622" y="208" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">indice := make(map[int]Producto)</text>
+  <text x="622" y="222" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">if p, ok := indice[id]; ok {</text>
+  <text x="622" y="236" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    fmt.Println(p.Nombre)</text>
+  <text x="622" y="240" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Map de slices (agrupación) -->
+  <rect x="612" y="252" width="276" height="80" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="622" y="267" fill="#cba6f7" font-size="11" font-weight="bold">Agrupar: map[K][]V</text>
+  <text x="622" y="282" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">grupos := make(map[string][]int)</text>
+  <text x="622" y="296" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">for _, n := range nums {</text>
+  <text x="622" y="310" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    key := categoria(n)</text>
+  <text x="622" y="324" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    grupos[key] = append(grupos[key], n)</text>
+  <text x="622" y="328" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- nil map pitfall -->
+  <rect x="612" y="340" width="276" height="70" rx="3" fill="#181825" stroke="#f38ba8" stroke-width="1.5"/>
+  <text x="622" y="355" fill="#f38ba8" font-size="11" font-weight="bold">⚠ nil map — pánico al escribir</text>
+  <text x="622" y="370" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">var m map[string]int // nil</text>
+  <text x="622" y="384" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">_ = m["k"]  // OK — lee zero value</text>
+  <text x="622" y="398" fill="#f38ba8" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">m["k"] = 1  // PÁNICO — nil map</text>
+  <text x="622" y="403" fill="#a6e3a1" font-size="10">Siempre inicializar con make o literal</text>
+
+  <!-- ===================== PANEL INFERIOR ===================== -->
+  <rect x="10" y="428" width="880" height="82" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="445" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Reglas clave de maps</text>
+
+  <text x="28" y="461" fill="#f9e2af" font-size="11">📌 Usar make(map[K]V) — nunca asignar a nil map</text>
+  <text x="28" y="477" fill="#a6e3a1" font-size="11">📌 v, ok := m[k] — siempre verificar existencia cuando el zero value importa</text>
+  <text x="28" y="493" fill="#f38ba8" font-size="11">📌 El orden de iteración con range es ALEATORIO — no depender de él</text>
+  <text x="490" y="461" fill="#cba6f7" font-size="11">📌 freq[k]++ funciona sobre clave inexistente (zero value = 0)</text>
+  <text x="490" y="477" fill="#94e2d5" font-size="11">📌 No usar maps en goroutines sin sincronización (sync.RWMutex)</text>
+  <text x="490" y="493" fill="#cdd6f4" font-size="11">📌 Slices como valores: grupos[k] = append(grupos[k], v) es seguro</text>
+</svg>

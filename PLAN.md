@@ -104,16 +104,16 @@
 
 ## Semana 06 — Maps y Structs
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de maps y structs con campos)
-- [ ] `1-teoria/01-maps.md`
-- [ ] `1-teoria/02-structs-y-metodos-de-valor.md`
-- [ ] `2-practicas/practica-01-maps/`
-- [ ] `2-practicas/practica-02-structs/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (SVG de maps y structs con campos)
+- [x] `1-teoria/01-maps.md`
+- [x] `1-teoria/02-structs-y-metodos-de-valor.md`
+- [x] `2-practicas/practica-01-maps/`
+- [x] `2-practicas/practica-02-structs/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
