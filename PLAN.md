@@ -1,6 +1,6 @@
 # Plan de Trabajo — bc-go Bootcamp
 
-> Actualizado: 2026-04-18 — comentarios académicos (qué/para qué/impacto) aplicados a semana 01
+> Actualizado: 2026-04-18 — banner SVG creado; comentarios académicos aplicados a semana 01
 
 ---
 
@@ -17,6 +17,7 @@
 - [x] `.github/prompts/nuevo-ejercicio.prompt.md`
 - [x] `.github/prompts/nuevo-proyecto.prompt.md`
 - [x] `.github/prompts/nuevo-asset-svg.prompt.md`
+- [x] `assets/banner.svg` (dark theme, Gopher + código decorativo, vinculado en README)
 
 ---
 
