@@ -1,7 +1,8 @@
 // Paquete main: qué → declara que este archivo pertenece al programa ejecutable.
 // Para qué → Go requiere exactamente un 'package main' con 'func main()' por binario.
 // Impacto   → cambiar a otro nombre (ej. 'package utils') convertiría esto en librería,
-//             no en ejecutable — 'go run' fallaría.
+//
+//	no en ejecutable — 'go run' fallaría.
 package main
 
 // import: qué → importa "fmt", el paquete de formateo de la librería estándar.
@@ -85,8 +86,9 @@ func main() {
 // saludar: qué → construye un saludo y retorna también la cantidad de bytes del string.
 // Para qué → ilustra la firma de múltiples retornos (T1, T2) sin usar error.
 // Impacto   → len() cuenta BYTES, no caracteres; para texto UTF-8 con tildes o emojis
-//             el resultado difiere de la cantidad visible de caracteres.
-//             Usar utf8.RuneCountInString() si necesitas caracteres reales.
+//
+//	el resultado difiere de la cantidad visible de caracteres.
+//	Usar utf8.RuneCountInString() si necesitas caracteres reales.
 func saludar(nombre string) (string, int) {
 	saludo := "Hola, " + nombre + "!"
 	// Retornar dos valores separados por coma — Go los empaqueta automáticamente.
@@ -96,7 +98,8 @@ func saludar(nombre string) (string, int) {
 // dividir: qué → divide a entre b y retorna el resultado o un error descriptivo.
 // Para qué → modela la firma idiomática (resultado, error) que verás en toda la std lib.
 // Impacto   → retornar 0 como primer valor cuando hay error es convención en Go;
-//             el llamador no debe usar ese 0 si err != nil.
+//
+//	el llamador no debe usar ese 0 si err != nil.
 func dividir(a, b float64) (float64, error) {
 	if b == 0 {
 		// fmt.Errorf: qué → crea un error con mensaje formateado (como Printf pero retorna error).

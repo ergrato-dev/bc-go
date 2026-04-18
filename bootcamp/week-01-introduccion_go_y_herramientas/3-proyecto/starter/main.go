@@ -71,7 +71,8 @@ func main() {
 // buildWelcome: qué → construye el saludo de bienvenida personalizado.
 // Para qué  → centralizar la lógica de formato evita repetición y facilita cambios.
 // Impacto   → retornar (string, error) sigue el patrón idiomático de Go:
-//             el llamador decide cómo manejar el fallo, no esta función.
+//
+//	el llamador decide cómo manejar el fallo, no esta función.
 //
 // Parámetros:
 //   - system: nombre del sistema (ej. "Biblioteca Municipal")
