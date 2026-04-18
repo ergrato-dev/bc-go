@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="30" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Operaciones con Slices — Aliasing, append y copy</text>
+
+  <!-- Divisores -->
+  <line x1="300" y1="45" x2="300" y2="420" stroke="#45475a" stroke-width="1"/>
+  <line x1="600" y1="45" x2="600" y2="420" stroke="#45475a" stroke-width="1"/>
+
+  <!-- ===================== COL 1: SLICING a[lo:hi] ===================== -->
+  <rect x="12" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="150" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">a[lo:hi] — Aliasing</text>
+
+  <text x="20" y="84" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">nums := []int{10, 20, 30, 40, 50}</text>
+  <text x="20" y="99" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">sub  := nums[1:4]</text>
+
+  <!-- nums array cells -->
+  <text x="20" y="118" fill="#a6e3a1" font-size="10">nums — backing array:</text>
+  <rect x="20" y="124" width="38" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="39" y="141" text-anchor="middle" fill="#cdd6f4" font-size="11">10</text>
+  <text x="39" y="156" text-anchor="middle" fill="#585b70" font-size="8">[0]</text>
+
+  <rect x="62" y="124" width="38" height="26" rx="2" fill="#2a2a3e" stroke="#f38ba8" stroke-width="2"/>
+  <text x="81" y="141" text-anchor="middle" fill="#cdd6f4" font-size="11">20</text>
+  <text x="81" y="156" text-anchor="middle" fill="#585b70" font-size="8">[1]</text>
+
+  <rect x="104" y="124" width="38" height="26" rx="2" fill="#2a2a3e" stroke="#f38ba8" stroke-width="2"/>
+  <text x="123" y="141" text-anchor="middle" fill="#cdd6f4" font-size="11">30</text>
+  <text x="123" y="156" text-anchor="middle" fill="#585b70" font-size="8">[2]</text>
+
+  <rect x="146" y="124" width="38" height="26" rx="2" fill="#2a2a3e" stroke="#f38ba8" stroke-width="2"/>
+  <text x="165" y="141" text-anchor="middle" fill="#cdd6f4" font-size="11">40</text>
+  <text x="165" y="156" text-anchor="middle" fill="#585b70" font-size="8">[3]</text>
+
+  <rect x="188" y="124" width="38" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="207" y="141" text-anchor="middle" fill="#cdd6f4" font-size="11">50</text>
+  <text x="207" y="156" text-anchor="middle" fill="#585b70" font-size="8">[4]</text>
+
+  <!-- Headers de nums y sub -->
+  <text x="20" y="178" fill="#cdd6f4" font-size="10">nums: ptr→[0]  len=5  cap=5</text>
+
+  <!-- sub apunta a [1] -->
+  <defs>
+    <marker id="arrRed" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#f38ba8"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#a6e3a1"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#00ADD8"/>
+    </marker>
+  </defs>
+  <!-- Flecha de sub apuntando a [1] -->
+  <line x1="81" y1="198" x2="81" y2="152" stroke="#f38ba8" stroke-width="1.5" marker-end="url(#arrRed)"/>
+  <text x="20" y="213" fill="#f38ba8" font-size="10">sub: ptr→[1]  len=3  cap=4</text>
+
+  <!-- Consecuencia -->
+  <text x="20" y="237" fill="#f9e2af" font-size="11">⚠ sub y nums comparten datos:</text>
+  <text x="20" y="252" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">sub[0] = 99</text>
+  <text x="20" y="267" fill="#cdd6f4" font-size="10">nums → [10, 99, 30, 40, 50] !</text>
+
+  <!-- a[lo:hi:max] -->
+  <text x="20" y="292" fill="#a6e3a1" font-size="11">Limitar cap con three-index slice:</text>
+  <text x="20" y="307" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">s := nums[1:4:4]</text>
+  <text x="20" y="322" fill="#cdd6f4" font-size="10">cap=3, append → nuevo array ✓</text>
+
+  <!-- Casos de uso -->
+  <text x="20" y="348" fill="#cba6f7" font-size="11">Casos de uso de a[lo:hi]:</text>
+  <text x="20" y="364" fill="#cdd6f4" font-size="10">• Ventana sobre datos grandes</text>
+  <text x="20" y="380" fill="#cdd6f4" font-size="10">• Procesar sub-rangos sin copiar</text>
+  <text x="20" y="396" fill="#cdd6f4" font-size="10">• Solo si no necesitas independencia</text>
+
+  <!-- ===================== COL 2: APPEND REALLOC ===================== -->
+  <rect x="312" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="450" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">append — Realloc cuando cap insuficiente</text>
+
+  <text x="320" y="82" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">s := make([]int, 3, 3)</text>
+  <text x="320" y="96" fill="#cdd6f4" font-size="10">s = [1, 2, 3],  len=3, cap=3</text>
+
+  <!-- ANTES del append -->
+  <text x="320" y="116" fill="#a6e3a1" font-size="11">ANTES del append:</text>
+  <text x="320" y="131" fill="#585b70" font-size="10">Header:</text>
+  <rect x="320" y="136" width="54" height="24" rx="2" fill="#1a2f3a" stroke="#00ADD8" stroke-width="1"/>
+  <text x="347" y="152" text-anchor="middle" fill="#00ADD8" font-size="10">ptr: X</text>
+  <rect x="378" y="136" width="40" height="24" rx="2" fill="#1a2f3a" stroke="#a6e3a1" stroke-width="1"/>
+  <text x="398" y="152" text-anchor="middle" fill="#a6e3a1" font-size="10">len:3</text>
+  <rect x="422" y="136" width="40" height="24" rx="2" fill="#1a2f3a" stroke="#f9e2af" stroke-width="1"/>
+  <text x="442" y="152" text-anchor="middle" fill="#f9e2af" font-size="10">cap:3</text>
+
+  <!-- Array antes -->
+  <text x="320" y="177" fill="#585b70" font-size="10">Backing array @ X:</text>
+  <rect x="320" y="182" width="36" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="338" y="199" text-anchor="middle" fill="#cdd6f4" font-size="11">1</text>
+  <rect x="360" y="182" width="36" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="378" y="199" text-anchor="middle" fill="#cdd6f4" font-size="11">2</text>
+  <rect x="400" y="182" width="36" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="418" y="199" text-anchor="middle" fill="#cdd6f4" font-size="11">3</text>
+
+  <!-- Operación -->
+  <text x="320" y="226" fill="#f9e2af" font-size="11">s = append(s, 4)  → cap insuficiente</text>
+  <text x="320" y="241" fill="#f38ba8" font-size="10">Go alloca nuevo backing array más grande</text>
+
+  <!-- DESPUÉS del append -->
+  <text x="320" y="263" fill="#a6e3a1" font-size="11">DESPUÉS del append:</text>
+  <text x="320" y="278" fill="#585b70" font-size="10">Nuevo header:</text>
+  <rect x="320" y="283" width="54" height="24" rx="2" fill="#1a2f3a" stroke="#00ADD8" stroke-width="1"/>
+  <text x="347" y="299" text-anchor="middle" fill="#00ADD8" font-size="10">ptr: Y</text>
+  <rect x="378" y="283" width="40" height="24" rx="2" fill="#1a2f3a" stroke="#a6e3a1" stroke-width="1"/>
+  <text x="398" y="299" text-anchor="middle" fill="#a6e3a1" font-size="10">len:4</text>
+  <rect x="422" y="283" width="40" height="24" rx="2" fill="#1a2f3a" stroke="#f9e2af" stroke-width="1"/>
+  <text x="442" y="299" text-anchor="middle" fill="#f9e2af" font-size="10">cap:6</text>
+
+  <!-- Array después -->
+  <text x="320" y="324" fill="#585b70" font-size="10">Nuevo backing array @ Y:</text>
+  <rect x="320" y="329" width="30" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="335" y="346" text-anchor="middle" fill="#cdd6f4" font-size="11">1</text>
+  <rect x="354" y="329" width="30" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="369" y="346" text-anchor="middle" fill="#cdd6f4" font-size="11">2</text>
+  <rect x="388" y="329" width="30" height="26" rx="2" fill="#2a2a3e" stroke="#585b70" stroke-width="1"/>
+  <text x="403" y="346" text-anchor="middle" fill="#cdd6f4" font-size="11">3</text>
+  <rect x="422" y="329" width="30" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="437" y="346" text-anchor="middle" fill="#a6e3a1" font-size="11">4</text>
+  <rect x="456" y="329" width="30" height="26" rx="2" fill="#181825" stroke="#45475a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="471" y="346" text-anchor="middle" fill="#45475a" font-size="11">0</text>
+  <rect x="490" y="329" width="30" height="26" rx="2" fill="#181825" stroke="#45475a" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="505" y="346" text-anchor="middle" fill="#45475a" font-size="11">0</text>
+
+  <!-- Warning -->
+  <text x="320" y="376" fill="#f38ba8" font-size="11">El array en X ya NO pertenece a s</text>
+  <text x="320" y="392" fill="#cdd6f4" font-size="10">Por eso: s = append(s, v) es obligatorio</text>
+  <text x="320" y="408" fill="#a6e3a1" font-size="10">cap puede doblar o menos (Go decide)</text>
+
+  <!-- ===================== COL 3: COPY ===================== -->
+  <rect x="612" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="750" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">copy — Slices Independientes</text>
+
+  <text x="620" y="84" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">src := []int{10, 20, 30, 40, 50}</text>
+  <text x="620" y="98" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">dst := make([]int, len(src))</text>
+  <text x="620" y="112" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">n := copy(dst, src)</text>
+
+  <!-- src array -->
+  <text x="620" y="132" fill="#a6e3a1" font-size="10">src (backing array A):</text>
+  <rect x="620" y="138" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="637" y="155" text-anchor="middle" fill="#cdd6f4" font-size="11">10</text>
+  <rect x="658" y="138" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="675" y="155" text-anchor="middle" fill="#cdd6f4" font-size="11">20</text>
+  <rect x="696" y="138" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="713" y="155" text-anchor="middle" fill="#cdd6f4" font-size="11">30</text>
+  <rect x="734" y="138" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="751" y="155" text-anchor="middle" fill="#cdd6f4" font-size="11">40</text>
+  <rect x="772" y="138" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="789" y="155" text-anchor="middle" fill="#cdd6f4" font-size="11">50</text>
+
+  <!-- copy arrow -->
+  <text x="750" y="183" text-anchor="middle" fill="#f9e2af" font-size="11">copy duplica byte a byte ↓</text>
+
+  <!-- dst array -->
+  <text x="620" y="206" fill="#cba6f7" font-size="10">dst (backing array B — nuevo):</text>
+  <rect x="620" y="212" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="637" y="229" text-anchor="middle" fill="#cdd6f4" font-size="11">10</text>
+  <rect x="658" y="212" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="675" y="229" text-anchor="middle" fill="#cdd6f4" font-size="11">20</text>
+  <rect x="696" y="212" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="713" y="229" text-anchor="middle" fill="#cdd6f4" font-size="11">30</text>
+  <rect x="734" y="212" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="751" y="229" text-anchor="middle" fill="#cdd6f4" font-size="11">40</text>
+  <rect x="772" y="212" width="34" height="26" rx="2" fill="#2a2a3e" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="789" y="229" text-anchor="middle" fill="#cdd6f4" font-size="11">50</text>
+
+  <!-- Independencia demostrada -->
+  <text x="620" y="258" fill="#a6e3a1" font-size="11">Son independientes:</text>
+  <text x="620" y="272" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">dst[0] = 99</text>
+  <text x="620" y="287" fill="#cdd6f4" font-size="10">src[0] sigue siendo 10 ✓</text>
+
+  <!-- Comportamiento de copy -->
+  <text x="620" y="311" fill="#f9e2af" font-size="11">Reglas de copy:</text>
+  <text x="620" y="327" fill="#cdd6f4" font-size="10">• copia min(len(dst), len(src)) elems</text>
+  <text x="620" y="343" fill="#cdd6f4" font-size="10">• retorna n = elementos copiados</text>
+  <text x="620" y="359" fill="#cdd6f4" font-size="10">• funciona con strings → []byte</text>
+
+  <!-- Patrones idiomáticos -->
+  <text x="620" y="383" fill="#cba6f7" font-size="11">Patrón: clonar un slice</text>
+  <text x="620" y="397" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">clone := append([]int{}, src...)</text>
+  <text x="620" y="412" fill="#a6e3a1" font-size="10">alternativa idiomática a make+copy</text>
+
+  <!-- ===================== PANEL INFERIOR ===================== -->
+  <rect x="10" y="428" width="880" height="82" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="445" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Cuándo usar cada operación</text>
+
+  <text x="28" y="461" fill="#a6e3a1" font-size="11">📌 a[lo:hi]: cuando necesitas una ventana eficiente (sin copia) — cuidado con aliasing</text>
+  <text x="28" y="477" fill="#f9e2af" font-size="11">📌 append: para construir slices dinámicamente — siempre s = append(s, v)</text>
+  <text x="28" y="493" fill="#cba6f7" font-size="11">📌 copy: cuando necesitas independencia total del backing array — evita bugs sutiles</text>
+  <text x="490" y="461" fill="#94e2d5" font-size="11">📌 make([]T, 0, n): prealocar capacidad esperada → menos reallocations</text>
+  <text x="490" y="477" fill="#f38ba8" font-size="11">📌 append([]T{}, src...): clonar de forma concisa y segura</text>
+  <text x="490" y="493" fill="#cdd6f4" font-size="11">📌 a[lo:hi:max]: limitar cap del sub-slice para forzar realloc en append</text>
+</svg>

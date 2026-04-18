@@ -89,16 +89,16 @@
 
 ## Semana 05 — Arrays y Slices
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de slice header + backing array)
-- [ ] `1-teoria/01-arrays.md`
-- [ ] `1-teoria/02-slices-internals.md`
-- [ ] `2-practicas/practica-01-arrays/`
-- [ ] `2-practicas/practica-02-slices/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (01-arrays-vs-slices.svg, 02-slice-operaciones.svg)
+- [x] `1-teoria/01-arrays.md`
+- [x] `1-teoria/02-slices-internals.md`
+- [x] `2-practicas/practica-01-arrays/`
+- [x] `2-practicas/practica-02-slices/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
