@@ -126,12 +126,12 @@
   <text x="622" y="336" fill="#cdd6f4" font-size="10">campo de struct, elemento de slice)</text>
 
   <!-- Regla de consistencia -->
-  <rect x="612" y="352" width="276" height="58" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <rect x="612" y="352" width="276" height="74" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
   <text x="622" y="367" fill="#cba6f7" font-size="11" font-weight="bold">Regla de consistencia</text>
   <text x="622" y="382" fill="#a6e3a1" font-size="10">Si un método necesita modificar → *Tipo</text>
   <text x="622" y="396" fill="#cdd6f4" font-size="10">Si el struct es grande → *Tipo (evita copia)</text>
   <text x="622" y="410" fill="#cdd6f4" font-size="10">Si todos los métodos del tipo son de puntero</text>
-  <text x="622" y="417" fill="#f9e2af" font-size="10">→ usa receptor *Tipo en todos</text>
+  <text x="622" y="424" fill="#f9e2af" font-size="10">→ usa receptor *Tipo en todos</text>
 
   <!-- ===================== PANEL INFERIOR ===================== -->
   <rect x="10" y="428" width="880" height="82" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
