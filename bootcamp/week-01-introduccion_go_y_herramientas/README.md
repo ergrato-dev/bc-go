@@ -28,9 +28,11 @@ week-01-introduccion_go_y_herramientas/
 ├── README.md                        # Este archivo
 ├── rubrica-evaluacion.md            # Criterios de evaluación
 ├── 0-assets/
-│   └── go-toolchain-overview.svg   # Diagrama del toolchain de Go
+│   ├── 01-go-toolchain-overview.svg  # Diagrama del toolchain de Go
+│   └── 02-go-modules-overview.svg   # Diagrama de módulos y paquetes
 ├── 1-teoria/
-│   └── introduccion-go.md          # Teoría: historia, filosofía, toolchain
+│   ├── 01-introduccion-go.md        # Teoría: historia, filosofía, toolchain
+│   └── 02-modulos-y-paquetes.md     # Teoría: módulos, paquetes, visibilidad
 ├── 2-practicas/
 │   └── practica-01-hola-go/        # Primer programa Go
 │       ├── README.md
@@ -55,11 +57,13 @@ week-01-introduccion_go_y_herramientas/
 
 ### Teoría
 
-- [Introducción a Go: historia, filosofía y toolchain](1-teoria/introduccion-go.md)
+- [01 — Introducción a Go: historia, filosofía y toolchain](1-teoria/01-introduccion-go.md)
+- [02 — Módulos y paquetes: go mod, visibilidad, imports](1-teoria/02-modulos-y-paquetes.md)
 
 ### Prácticas
 
 - [Práctica 01 — Hola Go: primer programa](2-practicas/practica-01-hola-go/README.md)
+- [Práctica 02 — Go CLI: argumentos y toolchain](2-practicas/practica-02-go-cli/README.md)
 
 ### Proyecto
 

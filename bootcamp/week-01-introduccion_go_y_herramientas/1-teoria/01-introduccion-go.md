@@ -1,6 +1,6 @@
 # Introducción a Go: Historia, Filosofía y Toolchain
 
-![Visión general del toolchain de Go](../0-assets/go-toolchain-overview.svg)
+![Visión general del toolchain de Go](../0-assets/01-go-toolchain-overview.svg)
 
 ## 🎯 Objetivos
 

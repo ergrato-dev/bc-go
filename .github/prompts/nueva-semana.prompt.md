@@ -17,23 +17,55 @@ estrictamente la estructura y convenciones del repositorio.
 
 ## Orden de creación obligatorio
 
-Crea los archivos en este orden exacto y espera confirmación entre secciones si el contenido es extenso:
+Crea los archivos **en este orden exacto**. Espera confirmación entre secciones si el contenido es extenso.
 
-1. `bootcamp/<slug>/README.md`
-2. `bootcamp/<slug>/rubrica-evaluacion.md`
-3. `bootcamp/<slug>/0-assets/<concepto>.svg` — al menos 1 diagrama SVG (dark theme, color #00ADD8)
-4. `bootcamp/<slug>/1-teoria/01-<concepto>.md` — mínimo 150 líneas, con SVG vinculado
-5. `bootcamp/<slug>/1-teoria/02-<concepto>.md` (si aplica)
-6. `bootcamp/<slug>/2-practicas/practica-01-<tema>/README.md`
-7. `bootcamp/<slug>/2-practicas/practica-01-<tema>/starter/main.go`
-8. `bootcamp/<slug>/2-practicas/practica-02-<tema>/README.md` (si aplica)
-9. `bootcamp/<slug>/2-practicas/practica-02-<tema>/starter/main.go` (si aplica)
-10. `bootcamp/<slug>/3-proyecto/README.md`
-11. `bootcamp/<slug>/3-proyecto/starter/main.go`
-12. `bootcamp/<slug>/4-recursos/ebooks-free/README.md`
-13. `bootcamp/<slug>/4-recursos/videografia/README.md`
-14. `bootcamp/<slug>/4-recursos/webgrafia/README.md`
-15. `bootcamp/<slug>/5-glosario/README.md`
+### 1. README de la semana
+`bootcamp/<slug>/README.md`
+
+### 2. Rúbrica de evaluación
+`bootcamp/<slug>/rubrica-evaluacion.md`  
+Consulta el formato de los repos de ejemplo (bc-sql, bc-fastapi): conocimiento 30 % / desempeño 40 % / producto 30 %.
+
+### 3. Archivos de teoría (numerados 01-, 02-, …)
+```
+bootcamp/<slug>/1-teoria/01-<concepto-principal>.md   ← mínimo 150 líneas
+bootcamp/<slug>/1-teoria/02-<segundo-concepto>.md     ← si aplica
+```
+Escribe primero el contenido completo de cada archivo de teoría.  
+Deja marcadores `<!-- SVG: nombre-descriptivo.svg -->` donde irá cada diagrama.
+
+### 4. Assets SVG (numerados en orden lógico de lectura 01-, 02-, …)
+```
+bootcamp/<slug>/0-assets/01-<concepto-principal>.svg
+bootcamp/<slug>/0-assets/02-<segundo-concepto>.svg    ← si aplica
+```
+Crea cada SVG y reemplaza los marcadores de la teoría por el enlace real:  
+`![Descripción](../0-assets/01-nombre.svg)`
+
+### 5. Prácticas
+```
+bootcamp/<slug>/2-practicas/practica-01-<tema>/README.md
+bootcamp/<slug>/2-practicas/practica-01-<tema>/starter/main.go
+bootcamp/<slug>/2-practicas/practica-02-<tema>/README.md   ← si aplica
+bootcamp/<slug>/2-practicas/practica-02-<tema>/starter/main.go
+```
+
+### 6. Proyecto
+```
+bootcamp/<slug>/3-proyecto/README.md
+bootcamp/<slug>/3-proyecto/starter/main.go
+```
+
+### 7. Recursos (los tres completos)
+```
+bootcamp/<slug>/4-recursos/ebooks-free/README.md
+bootcamp/<slug>/4-recursos/videografia/README.md
+bootcamp/<slug>/4-recursos/webgrafia/README.md
+```
+
+### 8. Glosario
+`bootcamp/<slug>/5-glosario/README.md`  
+Términos clave ordenados alfabéticamente con formato qué / para qué / impacto.
 
 ## Reglas críticas
 
@@ -88,5 +120,5 @@ Incluir siempre al final:
 | [← Semana N-1 — Tema](../week-NN-slug/README.md) | [Semana N+1 — Tema →](../week-NN-slug/README.md) |
 ```
 
-Divide la creación por secciones (teoría → prácticas → proyecto) y espera
+Divide la creación por secciones (según el orden de creación obligatorio) y espera
 confirmación entre secciones si el contenido es extenso.

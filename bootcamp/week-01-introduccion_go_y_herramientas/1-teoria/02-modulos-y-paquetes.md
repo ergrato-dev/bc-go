@@ -1,6 +1,6 @@
 # Módulos, Paquetes y Visibilidad en Go
 
-![Diagrama de módulos y paquetes en Go](../0-assets/go-modules-overview.svg)
+![Diagrama de módulos y paquetes en Go](../0-assets/02-go-modules-overview.svg)
 
 ## 🎯 Objetivos
 
