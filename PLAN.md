@@ -41,7 +41,7 @@
 - [x] `5-glosario/README.md`
 
 ---
- 
+
 ## Semana 02 — Variables, Tipos y Constantes
 
 - [x] `README.md` de la semana

@@ -100,7 +100,7 @@ antes de vaciar: lleno
 después de vaciar: lleno
 
 --- Paso 3: método de puntero (sí modifica) ---
-antes de llenar: 
+antes de llenar:
 después de llenar: arroz
 
 --- Paso 4: auto-deref ---

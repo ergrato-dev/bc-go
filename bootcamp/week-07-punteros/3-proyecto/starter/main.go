@@ -23,9 +23,9 @@ import "fmt"
 // TODO: Renombra este struct y sus campos según tu dominio.
 // Ejemplo (Biblioteca): type Libro struct { titulo, autor string; disponible bool }
 type Item struct {
-	nombre   string
+	nombre    string
 	categoria string
-	activo   bool
+	activo    bool
 }
 
 // descripcion retorna un resumen del item (receptor de VALOR — solo lectura).
