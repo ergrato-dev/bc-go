@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo principal -->
+  <rect width="900" height="540" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="450" y="38" fill="#e6edf3" font-size="18" font-weight="700" text-anchor="middle">Tipos Básicos y Zero Values en Go</text>
+  <line x1="60" y1="50" x2="840" y2="50" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA IZQUIERDA: Tipos enteros
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="62" width="260" height="210" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.2"/>
+  <rect x="30" y="62" width="260" height="28" rx="6" fill="#00ADD8"/>
+  <text x="160" y="80" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">Tipos Enteros</text>
+
+  <!-- Cabecera tabla -->
+  <text x="60"  y="108" fill="#8b949e" font-size="10" font-weight="600">TIPO</text>
+  <text x="145" y="108" fill="#8b949e" font-size="10" font-weight="600">BITS</text>
+  <text x="200" y="108" fill="#8b949e" font-size="10" font-weight="600">ZERO</text>
+  <line x1="42" y1="112" x2="278" y2="112" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Filas enteros con signo -->
+  <text x="60"  y="128" fill="#79c0ff" font-size="11" font-family="monospace">int8</text>
+  <text x="145" y="128" fill="#e6edf3" font-size="11">8</text>
+  <text x="200" y="128" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="146" fill="#79c0ff" font-size="11" font-family="monospace">int16</text>
+  <text x="145" y="146" fill="#e6edf3" font-size="11">16</text>
+  <text x="200" y="146" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="164" fill="#79c0ff" font-size="11" font-family="monospace">int32</text>
+  <text x="145" y="164" fill="#e6edf3" font-size="11">32</text>
+  <text x="200" y="164" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="182" fill="#79c0ff" font-size="11" font-family="monospace">int64</text>
+  <text x="145" y="182" fill="#e6edf3" font-size="11">64</text>
+  <text x="200" y="182" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="200" fill="#ffa657" font-size="11" font-family="monospace" font-weight="700">int</text>
+  <text x="145" y="200" fill="#e6edf3" font-size="11">32/64</text>
+  <text x="200" y="200" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <line x1="42" y1="206" x2="278" y2="206" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="60"  y="222" fill="#79c0ff" font-size="11" font-family="monospace">uint8</text>
+  <text x="145" y="222" fill="#e6edf3" font-size="11">8</text>
+  <text x="200" y="222" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="240" fill="#79c0ff" font-size="11" font-family="monospace">uint / uint64</text>
+  <text x="200" y="240" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="42" y="264" fill="#8b949e" font-size="9">✱ int y uint: 32 bits en x86, 64 bits en x64</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA IZQUIERDA: Tipos flotantes
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="286" width="260" height="110" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.2"/>
+  <rect x="30" y="286" width="260" height="28" rx="6" fill="#00ADD8"/>
+  <text x="160" y="304" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">Tipos Flotantes</text>
+
+  <text x="60"  y="332" fill="#8b949e" font-size="10" font-weight="600">TIPO</text>
+  <text x="145" y="332" fill="#8b949e" font-size="10" font-weight="600">BITS</text>
+  <text x="200" y="332" fill="#8b949e" font-size="10" font-weight="600">ZERO</text>
+  <line x1="42" y1="336" x2="278" y2="336" stroke="#21262d" stroke-width="1"/>
+
+  <text x="60"  y="354" fill="#79c0ff" font-size="11" font-family="monospace">float32</text>
+  <text x="145" y="354" fill="#e6edf3" font-size="11">32</text>
+  <text x="200" y="354" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="60"  y="372" fill="#ffa657" font-size="11" font-family="monospace" font-weight="700">float64</text>
+  <text x="145" y="372" fill="#e6edf3" font-size="11">64</text>
+  <text x="200" y="372" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="42" y="390" fill="#8b949e" font-size="9">✱ Preferir float64 (más precisión, más seguro)</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA CENTRAL: string / byte / rune / bool
+  ══════════════════════════════════════════ -->
+  <rect x="318" y="62" width="270" height="220" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.2"/>
+  <rect x="318" y="62" width="270" height="28" rx="6" fill="#00ADD8"/>
+  <text x="453" y="80" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">Texto y Booleano</text>
+
+  <text x="346" y="108" fill="#8b949e" font-size="10" font-weight="600">TIPO</text>
+  <text x="450" y="108" fill="#8b949e" font-size="10" font-weight="600">ALIAS</text>
+  <text x="540" y="108" fill="#8b949e" font-size="10" font-weight="600">ZERO</text>
+  <line x1="330" y1="112" x2="576" y2="112" stroke="#21262d" stroke-width="1"/>
+
+  <text x="346" y="130" fill="#ffa657" font-size="11" font-family="monospace" font-weight="700">string</text>
+  <text x="450" y="130" fill="#8b949e" font-size="11">—</text>
+  <text x="540" y="130" fill="#3fb950" font-size="11" font-family="monospace">""</text>
+
+  <text x="346" y="152" fill="#79c0ff" font-size="11" font-family="monospace">byte</text>
+  <text x="450" y="152" fill="#8b949e" font-size="11">= uint8</text>
+  <text x="540" y="152" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="346" y="174" fill="#79c0ff" font-size="11" font-family="monospace">rune</text>
+  <text x="450" y="174" fill="#8b949e" font-size="11">= int32</text>
+  <text x="540" y="174" fill="#3fb950" font-size="11" font-family="monospace">0</text>
+
+  <text x="346" y="196" fill="#ffa657" font-size="11" font-family="monospace" font-weight="700">bool</text>
+  <text x="450" y="196" fill="#8b949e" font-size="11">—</text>
+  <text x="540" y="196" fill="#3fb950" font-size="11" font-family="monospace">false</text>
+
+  <!-- byte vs rune explicación -->
+  <rect x="330" y="210" width="244" height="58" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="452" y="226" fill="#8b949e" font-size="10" text-anchor="middle">byte → ASCII (1 byte)</text>
+  <text x="340" y="240" fill="#e6edf3" font-size="10" font-family="monospace">'A'  = 65  = 0x41</text>
+  <text x="452" y="254" fill="#8b949e" font-size="10" text-anchor="middle">rune → Unicode (hasta 4 bytes)</text>
+  <text x="340" y="268" fill="#e6edf3" font-size="display" font-size="10" font-family="monospace">'世' = 19990 = U+4E16</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA CENTRAL: var vs :=
+  ══════════════════════════════════════════ -->
+  <rect x="318" y="300" width="270" height="96" rx="6" fill="#0f2535" stroke="#21262d" stroke-width="1.2"/>
+  <text x="453" y="318" fill="#00ADD8" font-size="11" font-weight="700" text-anchor="middle">var  vs  :=</text>
+
+  <text x="330" y="336" fill="#8b949e" font-size="10">Fuera de funciones → obligatorio:</text>
+  <text x="330" y="350" fill="#3fb950" font-size="11" font-family="monospace">var globalCount int = 0</text>
+
+  <text x="330" y="368" fill="#8b949e" font-size="10">Dentro de funciones → idiomático:</text>
+  <text x="330" y="382" fill="#3fb950" font-size="11" font-family="monospace">name := "Gopher"</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA DERECHA: Zero Values tabla resumen
+  ══════════════════════════════════════════ -->
+  <rect x="614" y="62" width="256" height="334" rx="6" fill="#0f2535" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="614" y="62" width="256" height="28" rx="6" fill="#3fb950"/>
+  <text x="742" y="80" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">Zero Values Garantizados</text>
+
+  <text x="630" y="108" fill="#8b949e" font-size="10" font-weight="600">TIPO</text>
+  <text x="790" y="108" fill="#8b949e" font-size="10" font-weight="600">ZERO VALUE</text>
+  <line x1="622" y1="112" x2="858" y2="112" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Filas zero values -->
+  <text x="630" y="130" fill="#79c0ff" font-size="11" font-family="monospace">int, int8…int64</text>
+  <text x="790" y="130" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">0</text>
+
+  <text x="630" y="152" fill="#79c0ff" font-size="11" font-family="monospace">uint, uint8…</text>
+  <text x="790" y="152" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">0</text>
+
+  <text x="630" y="174" fill="#79c0ff" font-size="11" font-family="monospace">float32, float64</text>
+  <text x="790" y="174" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">0</text>
+
+  <text x="630" y="196" fill="#ffa657" font-size="11" font-family="monospace">bool</text>
+  <text x="790" y="196" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">false</text>
+
+  <text x="630" y="218" fill="#ffa657" font-size="11" font-family="monospace">string</text>
+  <text x="790" y="218" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">""</text>
+
+  <text x="630" y="240" fill="#79c0ff" font-size="11" font-family="monospace">byte, rune</text>
+  <text x="790" y="240" fill="#3fb950" font-size="12" font-weight="700" font-family="monospace">0</text>
+
+  <line x1="622" y1="248" x2="858" y2="248" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="630" y="266" fill="#79c0ff" font-size="11" font-family="monospace">*T  (puntero)</text>
+  <text x="790" y="266" fill="#f85149" font-size="12" font-weight="700" font-family="monospace">nil</text>
+
+  <text x="630" y="288" fill="#79c0ff" font-size="11" font-family="monospace">[]T (slice)</text>
+  <text x="790" y="288" fill="#f85149" font-size="12" font-weight="700" font-family="monospace">nil</text>
+
+  <text x="630" y="310" fill="#79c0ff" font-size="11" font-family="monospace">map[K]V</text>
+  <text x="790" y="310" fill="#f85149" font-size="12" font-weight="700" font-family="monospace">nil</text>
+
+  <text x="630" y="332" fill="#79c0ff" font-size="11" font-family="monospace">chan T</text>
+  <text x="790" y="332" fill="#f85149" font-size="12" font-weight="700" font-family="monospace">nil</text>
+
+  <text x="630" y="354" fill="#79c0ff" font-size="11" font-family="monospace">func(...)</text>
+  <text x="790" y="354" fill="#f85149" font-size="12" font-weight="700" font-family="monospace">nil</text>
+
+  <!-- nota zero value -->
+  <rect x="622" y="366" width="240" height="22" rx="3" fill="#0d1117"/>
+  <text x="742" y="381" fill="#8b949e" font-size="9" text-anchor="middle">Todas las variables tienen zero value al declararse</text>
+
+  <!-- ══════════════════════════════════════════
+       PANEL INFERIOR: Conversión de tipos
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="412" width="838" height="100" rx="6" fill="#0f2535" stroke="#21262d" stroke-width="1.2"/>
+  <text x="449" y="432" fill="#00ADD8" font-size="12" font-weight="700" text-anchor="middle">Conversión de Tipos (siempre explícita en Go)</text>
+
+  <!-- Ejemplo conversión -->
+  <rect x="44" y="440" width="350" height="60" rx="4" fill="#0d1117"/>
+  <text x="60" y="458" fill="#f85149" font-size="11" font-family="monospace">// ❌  NO COMPILA — sin conversión implícita</text>
+  <text x="60" y="474" fill="#8b949e" font-size="11" font-family="monospace">var x int = 10</text>
+  <text x="60" y="490" fill="#8b949e" font-size="11" font-family="monospace">var y float64 = x  // error</text>
+
+  <rect x="412" y="440" width="450" height="60" rx="4" fill="#0d1117"/>
+  <text x="428" y="458" fill="#3fb950" font-size="11" font-family="monospace">// ✅  Conversión explícita requerida</text>
+  <text x="428" y="474" fill="#e6edf3" font-size="11" font-family="monospace">var x int = 10</text>
+  <text x="428" y="490" fill="#e6edf3" font-size="11" font-family="monospace">var y float64 = <tspan fill="#ffa657">float64</tspan>(x)  // OK</text>
+
+  <!-- Leyenda inferior -->
+  <rect x="30" y="518" width="838" height="16" rx="3" fill="#161b22"/>
+  <circle cx="50"  cy="526" r="4" fill="#ffa657"/>
+  <text x="58"  y="529" fill="#8b949e" font-size="9">Tipo idiomático recomendado</text>
+  <circle cx="210" cy="526" r="4" fill="#3fb950"/>
+  <text x="218" y="529" fill="#8b949e" font-size="9">Zero value / valor seguro</text>
+  <circle cx="370" cy="526" r="4" fill="#f85149"/>
+  <text x="378" y="529" fill="#8b949e" font-size="9">nil (tipos referencia)</text>
+  <circle cx="500" cy="526" r="4" fill="#79c0ff"/>
+  <text x="508" y="529" fill="#8b949e" font-size="9">Tipo básico</text>
+</svg>

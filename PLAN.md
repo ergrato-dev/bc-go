@@ -44,16 +44,16 @@
 
 ## Semana 02 — Variables, Tipos y Constantes
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de tipos básicos, zero values)
-- [ ] `1-teoria/01-tipos-basicos-y-zero-values.md`
-- [ ] `1-teoria/02-constantes-e-iota.md`
-- [ ] `2-practicas/practica-01-tipos/`
-- [ ] `2-practicas/practica-02-iota/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (01-tipos-basicos-zero-values.svg, 02-constantes-iota.svg)
+- [x] `1-teoria/01-tipos-basicos-y-zero-values.md`
+- [x] `1-teoria/02-constantes-e-iota.md`
+- [x] `2-practicas/practica-01-tipos/`
+- [x] `2-practicas/practica-02-constantes-iota/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
