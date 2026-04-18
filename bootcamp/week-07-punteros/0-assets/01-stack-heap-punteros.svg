@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="30" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Punteros en Go — Stack, Heap y Operadores &amp; y *</text>
+
+  <!-- Divisores verticales -->
+  <line x1="300" y1="45" x2="300" y2="420" stroke="#45475a" stroke-width="1"/>
+  <line x1="600" y1="45" x2="600" y2="420" stroke="#45475a" stroke-width="1"/>
+
+  <!-- ===================== COL 1: STACK Y HEAP ===================== -->
+  <rect x="12" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="150" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Memoria: Stack y Heap</text>
+
+  <!-- Stack box -->
+  <rect x="20" y="76" width="120" height="160" rx="4" fill="#181825" stroke="#cba6f7" stroke-width="1.5"/>
+  <text x="80" y="94" text-anchor="middle" fill="#cba6f7" font-size="11" font-weight="bold">STACK</text>
+  <text x="80" y="108" text-anchor="middle" fill="#585b70" font-size="9">crece hacia abajo</text>
+
+  <!-- Variables en stack -->
+  <rect x="30" y="116" width="100" height="22" rx="2" fill="#313244" stroke="#a6e3a1" stroke-width="1"/>
+  <text x="80" y="131" text-anchor="middle" fill="#a6e3a1" font-size="10">n  int = 42</text>
+  <text x="155" y="131" fill="#585b70" font-size="9">0xc00001a0b8</text>
+
+  <rect x="30" y="142" width="100" height="22" rx="2" fill="#313244" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="80" y="157" text-anchor="middle" fill="#f9e2af" font-size="10">p  *int</text>
+  <text x="155" y="157" fill="#585b70" font-size="9">0xc00001a0c0</text>
+
+  <rect x="30" y="168" width="100" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="80" y="183" text-anchor="middle" fill="#cdd6f4" font-size="10">frame main()</text>
+
+  <rect x="30" y="194" width="100" height="22" rx="2" fill="#313244" stroke="#45475a" stroke-width="1"/>
+  <text x="80" y="209" text-anchor="middle" fill="#585b70" font-size="10">...</text>
+
+  <!-- Flecha de p hacia n -->
+  <path d="M 155 157 L 200 157 L 200 127 L 155 127" stroke="#f9e2af" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Heap box -->
+  <rect x="20" y="256" width="120" height="100" rx="4" fill="#181825" stroke="#89dceb" stroke-width="1.5"/>
+  <text x="80" y="274" text-anchor="middle" fill="#89dceb" font-size="11" font-weight="bold">HEAP</text>
+  <text x="80" y="288" text-anchor="middle" fill="#585b70" font-size="9">asignación dinámica</text>
+
+  <rect x="30" y="296" width="100" height="22" rx="2" fill="#313244" stroke="#89dceb" stroke-width="1"/>
+  <text x="80" y="311" text-anchor="middle" fill="#89dceb" font-size="10">new(int) → 0</text>
+
+  <!-- Texto escape analysis -->
+  <text x="20" y="375" fill="#cdd6f4" font-size="10">Go decide automáticamente</text>
+  <text x="20" y="389" fill="#cdd6f4" font-size="10">stack vs heap (escape analysis).</text>
+  <text x="20" y="403" fill="#a6e3a1" font-size="10">El programador no necesita</text>
+  <text x="20" y="417" fill="#a6e3a1" font-size="10">elegir manualmente.</text>
+
+  <!-- Marcador de flecha -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f9e2af"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#a6e3a1"/>
+    </marker>
+  </defs>
+
+  <!-- ===================== COL 2: OPERADORES & Y * ===================== -->
+  <rect x="312" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="450" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Operadores &amp; y *</text>
+
+  <!-- & operador -->
+  <rect x="312" y="76" width="276" height="80" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="322" y="91" fill="#a6e3a1" font-size="11" font-weight="bold">&amp; — dirección de memoria</text>
+  <text x="322" y="106" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">n := 42</text>
+  <text x="322" y="120" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">p := &amp;n       // p apunta a n</text>
+  <text x="322" y="134" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(p)  // 0xc00001a0b8</text>
+  <text x="322" y="148" fill="#cdd6f4" font-size="10">p tiene tipo *int (puntero a int)</text>
+
+  <!-- * operador -->
+  <rect x="312" y="164" width="276" height="80" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="322" y="179" fill="#f9e2af" font-size="11" font-weight="bold">* — derreferencia (valor en la dirección)</text>
+  <text x="322" y="194" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(*p)  // 42</text>
+  <text x="322" y="208" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">*p = 100         // modifica n a través de p</text>
+  <text x="322" y="222" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(n)   // 100</text>
+  <text x="322" y="236" fill="#cdd6f4" font-size="10">n y *p son el mismo valor en memoria</text>
+
+  <!-- nil pointer -->
+  <rect x="312" y="252" width="276" height="72" rx="3" fill="#181825" stroke="#f38ba8" stroke-width="1.5"/>
+  <text x="322" y="267" fill="#f38ba8" font-size="11" font-weight="bold">⚠ nil pointer — pánico al derreferir</text>
+  <text x="322" y="282" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">var p *int       // p == nil</text>
+  <text x="322" y="296" fill="#f38ba8" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(*p)  // PÁNICO</text>
+  <text x="322" y="310" fill="#a6e3a1" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">if p != nil { fmt.Println(*p) } // seguro</text>
+  <text x="322" y="318" fill="#cdd6f4" font-size="10">Verificar nil antes de derreferir siempre</text>
+
+  <!-- new() -->
+  <rect x="312" y="332" width="276" height="78" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="322" y="347" fill="#cba6f7" font-size="11" font-weight="bold">new(T) — puntero a zero value</text>
+  <text x="322" y="362" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">p := new(int)       // *int, *p == 0</text>
+  <text x="322" y="376" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">*p = 7</text>
+  <text x="322" y="390" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">q := &amp;MyStruct{}    // equivalente</text>
+  <text x="322" y="404" fill="#cdd6f4" font-size="10">new(T) es equivalente a &amp;T{} para structs</text>
+
+  <!-- ===================== COL 3: MÉTODOS Y AUTO-DEREF ===================== -->
+  <rect x="612" y="46" width="276" height="24" rx="3" fill="#313244"/>
+  <text x="750" y="62" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Métodos y auto-deref</text>
+
+  <!-- Método de valor -->
+  <rect x="612" y="76" width="276" height="80" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="622" y="91" fill="#cba6f7" font-size="11" font-weight="bold">Método de valor (t Tipo) — copia</text>
+  <text x="622" y="106" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (c Contador) Valor() int {</text>
+  <text x="622" y="120" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return c.n</text>
+  <text x="622" y="134" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="622" y="148" fill="#cdd6f4" font-size="10">c.n++ aquí NO afecta al original</text>
+
+  <!-- Método de puntero -->
+  <rect x="612" y="164" width="276" height="82" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="622" y="179" fill="#a6e3a1" font-size="11" font-weight="bold">Método de puntero (*Tipo) — modifica</text>
+  <text x="622" y="194" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func (c *Contador) Incrementar() {</text>
+  <text x="622" y="208" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    c.n++</text>
+  <text x="622" y="222" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+  <text x="622" y="238" fill="#a6e3a1" font-size="10">c.n++ aquí SÍ modifica el original</text>
+
+  <!-- Auto-deref -->
+  <rect x="612" y="254" width="276" height="90" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="622" y="269" fill="#f9e2af" font-size="11" font-weight="bold">Auto-deref — Go es inteligente</text>
+  <text x="622" y="284" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c := Contador{}</text>
+  <text x="622" y="298" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">c.Incrementar()  // Go convierte a</text>
+  <text x="622" y="312" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">(&amp;c).Incrementar() // automáticamente</text>
+  <text x="622" y="326" fill="#cdd6f4" font-size="10">Solo si c es direccionable (variable,</text>
+  <text x="622" y="336" fill="#cdd6f4" font-size="10">campo de struct, elemento de slice)</text>
+
+  <!-- Regla de consistencia -->
+  <rect x="612" y="352" width="276" height="58" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="622" y="367" fill="#cba6f7" font-size="11" font-weight="bold">Regla de consistencia</text>
+  <text x="622" y="382" fill="#a6e3a1" font-size="10">Si un método necesita modificar → *Tipo</text>
+  <text x="622" y="396" fill="#cdd6f4" font-size="10">Si el struct es grande → *Tipo (evita copia)</text>
+  <text x="622" y="410" fill="#cdd6f4" font-size="10">Si todos los métodos del tipo son de puntero</text>
+  <text x="622" y="417" fill="#f9e2af" font-size="10">→ usa receptor *Tipo en todos</text>
+
+  <!-- ===================== PANEL INFERIOR ===================== -->
+  <rect x="10" y="428" width="880" height="82" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="445" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Reglas clave de punteros</text>
+
+  <text x="28" y="461" fill="#a6e3a1" font-size="11">📌 &amp;variable → dirección de memoria (tipo *T)</text>
+  <text x="28" y="477" fill="#f9e2af" font-size="11">📌 *puntero → valor en esa dirección (derreferencia)</text>
+  <text x="28" y="493" fill="#f38ba8" font-size="11">📌 Derreferir un puntero nil provoca pánico — verificar con if p != nil</text>
+  <text x="490" y="461" fill="#cba6f7" font-size="11">📌 new(T) retorna *T con zero value, equivale a &amp;T{}</text>
+  <text x="490" y="477" fill="#94e2d5" font-size="11">📌 Go hace auto-deref para llamadas a métodos de puntero sobre variables</text>
+  <text x="490" y="493" fill="#cdd6f4" font-size="11">📌 No hay aritmética de punteros en Go (a diferencia de C/C++)</text>
+</svg>

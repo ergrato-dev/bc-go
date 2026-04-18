@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo -->
+  <rect width="900" height="520" fill="#1e1e2e"/>
+
+  <!-- Título -->
+  <text x="450" y="30" text-anchor="middle" fill="#cdd6f4" font-size="15" font-weight="bold">Paso por Valor vs Puntero — Cuándo Usar Cada Uno</text>
+
+  <!-- Divisores -->
+  <line x1="450" y1="45" x2="450" y2="420" stroke="#45475a" stroke-width="1"/>
+
+  <!-- ===================== LADO IZQ: PASO POR VALOR ===================== -->
+  <rect x="12" y="46" width="426" height="24" rx="3" fill="#313244"/>
+  <text x="225" y="62" text-anchor="middle" fill="#a6e3a1" font-size="12" font-weight="bold">Paso por valor — copia independiente</text>
+
+  <!-- Diagrama visual -->
+  <!-- Llamador -->
+  <rect x="20" y="80" width="110" height="50" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1.5"/>
+  <text x="75" y="99" text-anchor="middle" fill="#a6e3a1" font-size="10" font-weight="bold">llamador</text>
+  <text x="75" y="116" text-anchor="middle" fill="#94e2d5" font-size="10">n = 42</text>
+
+  <!-- Flecha a función -->
+  <line x1="130" y1="105" x2="165" y2="105" stroke="#585b70" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="147" y="100" text-anchor="middle" fill="#585b70" font-size="9">copia</text>
+
+  <!-- Función -->
+  <rect x="165" y="80" width="110" height="50" rx="3" fill="#181825" stroke="#585b70" stroke-width="1"/>
+  <text x="220" y="99" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="bold">función</text>
+  <text x="220" y="116" text-anchor="middle" fill="#585b70" font-size="10">x = 42 (copia)</text>
+
+  <!-- Indicador no cambia -->
+  <text x="20" y="150" fill="#a6e3a1" font-size="10">n sigue siendo 42 al volver</text>
+
+  <!-- Código paso por valor -->
+  <rect x="20" y="162" width="420" height="80" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="30" y="177" fill="#cba6f7" font-size="11" font-weight="bold">Función que recibe por valor</text>
+  <text x="30" y="192" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func duplicar(n int) int {</text>
+  <text x="30" y="206" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    n = n * 2   // modifica la copia local</text>
+  <text x="30" y="220" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    return n    // retorna el nuevo valor</text>
+  <text x="30" y="234" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Código uso por valor -->
+  <rect x="20" y="250" width="420" height="66" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="30" y="265" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">x := 5</text>
+  <text x="30" y="279" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">resultado := duplicar(x)</text>
+  <text x="30" y="293" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(x, resultado) // 5, 10 — x no cambió</text>
+  <text x="30" y="307" fill="#cdd6f4" font-size="10">x no fue modificado — duplicar recibió una copia</text>
+
+  <!-- Cuándo usar valor -->
+  <rect x="20" y="324" width="420" height="82" rx="3" fill="#181825" stroke="#a6e3a1" stroke-width="1"/>
+  <text x="30" y="339" fill="#a6e3a1" font-size="11" font-weight="bold">✅ Usar paso por valor cuando:</text>
+  <text x="30" y="354" fill="#cdd6f4" font-size="10">• El tipo es pequeño (int, bool, float64, string)</text>
+  <text x="30" y="368" fill="#cdd6f4" font-size="10">• El struct tiene pocos campos y es barato copiar</text>
+  <text x="30" y="382" fill="#cdd6f4" font-size="10">• La función no debe modificar el original</text>
+  <text x="30" y="396" fill="#cdd6f4" font-size="10">• Quieres inmutabilidad garantizada por el compilador</text>
+
+  <!-- ===================== LADO DER: PASO POR PUNTERO ===================== -->
+  <rect x="462" y="46" width="426" height="24" rx="3" fill="#313244"/>
+  <text x="675" y="62" text-anchor="middle" fill="#f9e2af" font-size="12" font-weight="bold">Paso por puntero — mismo lugar en memoria</text>
+
+  <!-- Diagrama visual -->
+  <rect x="470" y="80" width="110" height="50" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="525" y="99" text-anchor="middle" fill="#f9e2af" font-size="10" font-weight="bold">llamador</text>
+  <text x="525" y="116" text-anchor="middle" fill="#94e2d5" font-size="10">n = 42</text>
+
+  <!-- Flecha puntero -->
+  <line x1="580" y1="105" x2="615" y2="105" stroke="#f9e2af" stroke-width="1.5"/>
+  <text x="597" y="100" text-anchor="middle" fill="#f9e2af" font-size="9">&amp;n</text>
+
+  <!-- Función -->
+  <rect x="615" y="80" width="110" height="50" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1"/>
+  <text x="670" y="99" text-anchor="middle" fill="#cdd6f4" font-size="10" font-weight="bold">función</text>
+  <text x="670" y="116" text-anchor="middle" fill="#f9e2af" font-size="10">p → misma n</text>
+
+  <text x="470" y="150" fill="#f9e2af" font-size="10">n puede cambiar — la función accede al original</text>
+
+  <!-- Código paso por puntero -->
+  <rect x="470" y="162" width="420" height="80" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="480" y="177" fill="#cba6f7" font-size="11" font-weight="bold">Función que recibe puntero</text>
+  <text x="480" y="192" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">func duplicarEnSitio(n *int) {</text>
+  <text x="480" y="206" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    *n = *n * 2  // modifica el original</text>
+  <text x="480" y="220" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">    // no retorna nada</text>
+  <text x="480" y="234" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">}</text>
+
+  <!-- Código uso por puntero -->
+  <rect x="470" y="250" width="420" height="66" rx="3" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="480" y="265" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">x := 5</text>
+  <text x="480" y="279" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">duplicarEnSitio(&amp;x)</text>
+  <text x="480" y="293" fill="#94e2d5" font-size="10" font-family="'Roboto Mono', 'Courier New', monospace">fmt.Println(x) // 10 — x fue modificado</text>
+  <text x="480" y="307" fill="#cdd6f4" font-size="10">x cambió — la función modificó a través del puntero</text>
+
+  <!-- Cuándo usar puntero -->
+  <rect x="470" y="324" width="420" height="82" rx="3" fill="#181825" stroke="#f9e2af" stroke-width="1"/>
+  <text x="480" y="339" fill="#f9e2af" font-size="11" font-weight="bold">✅ Usar puntero cuando:</text>
+  <text x="480" y="354" fill="#cdd6f4" font-size="10">• La función DEBE modificar el valor original</text>
+  <text x="480" y="368" fill="#cdd6f4" font-size="10">• El struct es grande (evitar copia costosa)</text>
+  <text x="480" y="382" fill="#cdd6f4" font-size="10">• El método de puntero forma parte del method set</text>
+  <text x="480" y="396" fill="#cdd6f4" font-size="10">• Consistencia: si otros métodos del tipo usan *T, usar *T en todos</text>
+
+  <!-- ===================== PANEL INFERIOR ===================== -->
+  <rect x="10" y="428" width="880" height="82" rx="5" fill="#181825" stroke="#45475a" stroke-width="1"/>
+  <text x="450" y="445" text-anchor="middle" fill="#00ADD8" font-size="12" font-weight="bold">Comparación directa</text>
+
+  <text x="28" y="461" fill="#a6e3a1" font-size="11">Por valor: func f(s Struct) — copia completa, seguro, sin efectos secundarios</text>
+  <text x="28" y="477" fill="#f9e2af" font-size="11">Por puntero: func f(s *Struct) — acceso directo, puede modificar, más eficiente si grande</text>
+  <text x="28" y="493" fill="#cdd6f4" font-size="11">En Go: strings, ints y tipos pequeños → valor; structs con estado mutable → puntero</text>
+  <text x="510" y="461" fill="#f38ba8" font-size="11">⚠ Puntero a variable local: Go mueve al heap automáticamente (escape)</text>
+  <text x="510" y="477" fill="#cba6f7" font-size="11">Métodos: si alguno usa *T, considera usar *T en todos (consistencia)</text>
+  <text x="510" y="493" fill="#585b70" font-size="11">No confundir: *int (tipo puntero a int) vs int* (no existe en Go)</text>
+</svg>

@@ -41,7 +41,7 @@
 - [x] `5-glosario/README.md`
 
 ---
-
+ 
 ## Semana 02 — Variables, Tipos y Constantes
 
 - [x] `README.md` de la semana
@@ -119,16 +119,16 @@
 
 ## Semana 07 — Punteros
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de stack/heap, valor vs referencia)
-- [ ] `1-teoria/01-punteros-y-referencias.md`
-- [ ] `1-teoria/02-paso-por-valor-vs-puntero.md`
-- [ ] `2-practicas/practica-01-punteros/`
-- [ ] `2-practicas/practica-02-new/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (SVG de stack/heap, valor vs referencia)
+- [x] `1-teoria/01-punteros-y-referencias.md`
+- [x] `1-teoria/02-paso-por-valor-vs-puntero.md`
+- [x] `2-practicas/practica-01-punteros/`
+- [x] `2-practicas/practica-02-new/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
