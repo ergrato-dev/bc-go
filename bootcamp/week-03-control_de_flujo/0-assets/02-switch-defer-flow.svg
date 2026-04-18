@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Inter, Roboto, 'Open Sans', system-ui, sans-serif">
+  <!-- Fondo principal -->
+  <rect width="900" height="520" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="450" y="36" fill="#e6edf3" font-size="18" font-weight="700" text-anchor="middle">Control de Flujo en Go — switch y defer</text>
+  <line x1="60" y1="48" x2="840" y2="48" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA IZQUIERDA: switch patrones
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="60" width="260" height="310" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.2"/>
+  <rect x="30" y="60" width="260" height="28" rx="6" fill="#00ADD8"/>
+  <text x="160" y="78" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">switch — Patrones</text>
+
+  <!-- switch con expresión -->
+  <text x="44" y="104" fill="#8b949e" font-size="10" font-weight="600">CON EXPRESIÓN</text>
+  <rect x="40" y="108" width="236" height="62" rx="3" fill="#0d1117"/>
+  <text x="50" y="122" fill="#79c0ff" font-size="10" font-family="monospace">switch expr {</text>
+  <text x="50" y="136" fill="#79c0ff" font-size="10" font-family="monospace">case v1, v2:</text>
+  <text x="66" y="150" fill="#e6edf3" font-size="10" font-family="monospace">// múltiples valores</text>
+  <text x="50" y="164" fill="#79c0ff" font-size="10" font-family="monospace">default:</text>
+
+  <!-- sin expresión -->
+  <text x="44" y="184" fill="#8b949e" font-size="10" font-weight="600">SIN EXPRESIÓN (como if/else)</text>
+  <rect x="40" y="188" width="236" height="62" rx="3" fill="#0d1117"/>
+  <text x="50" y="202" fill="#79c0ff" font-size="10" font-family="monospace">switch {</text>
+  <text x="50" y="216" fill="#79c0ff" font-size="10" font-family="monospace">case x &gt; 100:</text>
+  <text x="50" y="230" fill="#79c0ff" font-size="10" font-family="monospace">case x &gt; 50:</text>
+  <text x="50" y="244" fill="#79c0ff" font-size="10" font-family="monospace">default:</text>
+
+  <!-- con inicialización -->
+  <text x="44" y="264" fill="#8b949e" font-size="10" font-weight="600">CON INICIALIZACIÓN</text>
+  <rect x="40" y="268" width="236" height="46" rx="3" fill="#0d1117"/>
+  <text x="50" y="282" fill="#79c0ff" font-size="10" font-family="monospace">switch v := expr; v {</text>
+  <text x="50" y="296" fill="#79c0ff" font-size="10" font-family="monospace">case 1:  // v solo aquí</text>
+  <text x="50" y="310" fill="#79c0ff" font-size="10" font-family="monospace">}</text>
+
+  <!-- fallthrough nota -->
+  <rect x="40" y="322" width="236" height="36" rx="3" fill="#161b22" stroke="#ffa657" stroke-width="1"/>
+  <text x="158" y="337" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">Sin break implícito en Go</text>
+  <text x="158" y="351" fill="#8b949e" font-size="9" text-anchor="middle">fallthrough → fuerza caída al siguiente caso</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA CENTRAL: defer LIFO
+  ══════════════════════════════════════════ -->
+  <rect x="318" y="60" width="270" height="310" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.2"/>
+  <rect x="318" y="60" width="270" height="28" rx="6" fill="#00ADD8"/>
+  <text x="453" y="78" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">defer — Stack LIFO</text>
+
+  <!-- Diagrama LIFO visual -->
+  <text x="330" y="100" fill="#8b949e" font-size="10" font-weight="600">ORDEN DE DECLARACIÓN</text>
+
+  <!-- flechas LIFO -->
+  <rect x="330" y="106" width="244" height="24" rx="3" fill="#0d1117"/>
+  <text x="340" y="122" fill="#e6edf3" font-size="10" font-family="monospace">defer fmt.Println("A")  <tspan fill="#ffa657">← 1°</tspan></text>
+
+  <rect x="330" y="134" width="244" height="24" rx="3" fill="#0d1117"/>
+  <text x="340" y="150" fill="#e6edf3" font-size="10" font-family="monospace">defer fmt.Println("B")  <tspan fill="#ffa657">← 2°</tspan></text>
+
+  <rect x="330" y="162" width="244" height="24" rx="3" fill="#0d1117"/>
+  <text x="340" y="178" fill="#e6edf3" font-size="10" font-family="monospace">defer fmt.Println("C")  <tspan fill="#ffa657">← 3°</tspan></text>
+
+  <!-- flecha de ejecución -->
+  <text x="453" y="202" fill="#8b949e" font-size="10" text-anchor="middle">función retorna ↓</text>
+  <text x="453" y="218" fill="#8b949e" font-size="10" text-anchor="middle">se ejecutan en orden inverso</text>
+
+  <text x="330" y="238" fill="#8b949e" font-size="10" font-weight="600">ORDEN DE EJECUCIÓN</text>
+
+  <rect x="330" y="242" width="244" height="24" rx="3" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+  <text x="340" y="258" fill="#3fb950" font-size="10" font-family="monospace">fmt.Println("C")  <tspan fill="#8b949e">← ejecuta 1°</tspan></text>
+
+  <rect x="330" y="270" width="244" height="24" rx="3" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+  <text x="340" y="286" fill="#3fb950" font-size="10" font-family="monospace">fmt.Println("B")  <tspan fill="#8b949e">← ejecuta 2°</tspan></text>
+
+  <rect x="330" y="298" width="244" height="24" rx="3" fill="#0d1117" stroke="#3fb950" stroke-width="1"/>
+  <text x="340" y="314" fill="#3fb950" font-size="10" font-family="monospace">fmt.Println("A")  <tspan fill="#8b949e">← ejecuta 3°</tspan></text>
+
+  <rect x="330" y="330" width="244" height="28" rx="3" fill="#161b22"/>
+  <text x="452" y="347" fill="#ffa657" font-size="9" text-anchor="middle">Salida: C  B  A — incluso si la función tiene panic</text>
+
+  <!-- ══════════════════════════════════════════
+       COLUMNA DERECHA: defer evaluación args + patrón recurso
+  ══════════════════════════════════════════ -->
+  <rect x="614" y="60" width="256" height="310" rx="6" fill="#0f2535" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="614" y="60" width="256" height="28" rx="6" fill="#3fb950"/>
+  <text x="742" y="78" fill="#0d1117" font-size="12" font-weight="700" text-anchor="middle">defer — Evaluación</text>
+
+  <!-- Evaluación inmediata -->
+  <text x="626" y="100" fill="#8b949e" font-size="10" font-weight="600">ARGUMENTOS: evaluados al declarar</text>
+  <rect x="622" y="104" width="238" height="72" rx="3" fill="#0d1117"/>
+  <text x="632" y="118" fill="#e6edf3" font-size="10" font-family="monospace">x := 10</text>
+  <text x="632" y="132" fill="#e6edf3" font-size="10" font-family="monospace">defer fmt.Println(x)  <tspan fill="#ffa657">// captura 10</tspan></text>
+  <text x="632" y="146" fill="#e6edf3" font-size="10" font-family="monospace">x = 99</text>
+  <text x="632" y="160" fill="#8b949e" font-size="10" font-family="monospace">// defer imprime: 10</text>
+  <text x="632" y="174" fill="#8b949e" font-size="9">No imprime 99 — el arg se evaluó antes</text>
+
+  <!-- Closure para capturar final -->
+  <text x="626" y="194" fill="#8b949e" font-size="10" font-weight="600">CLOSURE: captura valor final</text>
+  <rect x="622" y="198" width="238" height="72" rx="3" fill="#0d1117"/>
+  <text x="632" y="212" fill="#e6edf3" font-size="10" font-family="monospace">x := 10</text>
+  <text x="632" y="226" fill="#e6edf3" font-size="10" font-family="monospace">defer func() {</text>
+  <text x="648" y="240" fill="#e6edf3" font-size="10" font-family="monospace">fmt.Println(x)  <tspan fill="#3fb950">// lee x final</tspan></text>
+  <text x="632" y="254" fill="#e6edf3" font-size="10" font-family="monospace">}()</text>
+  <text x="632" y="268" fill="#e6edf3" font-size="10" font-family="monospace">x = 99  <tspan fill="#8b949e">// defer imprime: 99</tspan></text>
+
+  <!-- Patrón recurso -->
+  <text x="626" y="288" fill="#8b949e" font-size="10" font-weight="600">PATRÓN RECURSO (idiomático)</text>
+  <rect x="622" y="292" width="238" height="58" rx="3" fill="#0d1117" stroke="#00ADD8" stroke-width="1"/>
+  <text x="632" y="306" fill="#e6edf3" font-size="10" font-family="monospace">f, err := os.Open(path)</text>
+  <text x="632" y="320" fill="#e6edf3" font-size="10" font-family="monospace">if err != nil { return err }</text>
+  <text x="632" y="334" fill="#ffa657" font-size="10" font-family="monospace">defer f.Close()</text>
+  <text x="632" y="348" fill="#8b949e" font-size="9">abrir → defer cierre → usar</text>
+
+  <!-- ══════════════════════════════════════════
+       PANEL INFERIOR: switch vs if-else vs for tipica
+  ══════════════════════════════════════════ -->
+  <rect x="30" y="388" width="840" height="106" rx="6" fill="#0f2535" stroke="#21262d" stroke-width="1.2"/>
+  <text x="449" y="408" fill="#00ADD8" font-size="12" font-weight="700" text-anchor="middle">Cuándo usar cada estructura</text>
+
+  <rect x="44" y="416" width="190" height="66" rx="4" fill="#0d1117"/>
+  <text x="139" y="431" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">if / if-else</text>
+  <text x="54" y="445" fill="#8b949e" font-size="9">Condiciones booleanas simples</text>
+  <text x="54" y="459" fill="#8b949e" font-size="9">o con inicialización de variable</text>
+  <text x="54" y="473" fill="#8b949e" font-size="9">Manejo de errores (early return)</text>
+
+  <rect x="248" y="416" width="190" height="66" rx="4" fill="#0d1117"/>
+  <text x="343" y="431" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">switch</text>
+  <text x="258" y="445" fill="#8b949e" font-size="9">Múltiples valores de una expresión</text>
+  <text x="258" y="459" fill="#8b949e" font-size="9">Reemplaza cadenas largas if/else if</text>
+  <text x="258" y="473" fill="#8b949e" font-size="9">Type switch (semana 08)</text>
+
+  <rect x="452" y="416" width="190" height="66" rx="4" fill="#0d1117"/>
+  <text x="547" y="431" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">for / for range</text>
+  <text x="462" y="445" fill="#8b949e" font-size="9">Iterar colecciones o condiciones</text>
+  <text x="462" y="459" fill="#8b949e" font-size="9">range preferido sobre indexado manual</text>
+  <text x="462" y="473" fill="#8b949e" font-size="9">for infinito + select en concurrencia</text>
+
+  <rect x="656" y="416" width="200" height="66" rx="4" fill="#0d1117"/>
+  <text x="756" y="431" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">defer</text>
+  <text x="666" y="445" fill="#8b949e" font-size="9">Liberar recursos (Close, Unlock)</text>
+  <text x="666" y="459" fill="#8b949e" font-size="9">Logging de salida de función</text>
+  <text x="666" y="473" fill="#8b949e" font-size="9">Recover de panic (semana avanzada)</text>
+</svg>

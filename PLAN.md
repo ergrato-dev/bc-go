@@ -59,16 +59,16 @@
 
 ## Semana 03 — Control de Flujo
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de flujo if/for/switch/defer)
-- [ ] `1-teoria/01-if-y-for.md`
-- [ ] `1-teoria/02-switch-y-defer.md`
-- [ ] `2-practicas/practica-01-for/`
-- [ ] `2-practicas/practica-02-switch-defer/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (01-if-for-flow.svg, 02-switch-defer-flow.svg)
+- [x] `1-teoria/01-if-y-for.md`
+- [x] `1-teoria/02-switch-y-defer.md`
+- [x] `2-practicas/practica-01-for/`
+- [x] `2-practicas/practica-02-switch-defer/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
