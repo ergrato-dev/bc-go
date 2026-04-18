@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="920" height="540">
+  <rect width="920" height="540" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="460" y="32" font-family="Inter, Roboto, sans-serif" font-size="15" font-weight="bold" fill="#e6edf3" text-anchor="middle">Closures — Entorno Léxico y Captura de Variables</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA IZQUIERDA: Entorno léxico del closure          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="14" y="48" width="290" height="224" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="159" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#00ADD8" text-anchor="middle">Entorno Léxico</text>
+
+  <!-- función externa -->
+  <rect x="24" y="74" width="270" height="190" rx="4" fill="#161b22"/>
+
+  <!-- etiqueta: entorno de contadorNuevo -->
+  <rect x="30" y="80" width="258" height="14" rx="3" fill="#0f2535"/>
+  <text x="159" y="91" font-family="Inter, Roboto, sans-serif" font-size="8.5" fill="#8b949e" text-anchor="middle">entorno de contadorNuevo()</text>
+
+  <!-- variable n -->
+  <rect x="42" y="100" width="80" height="22" rx="3" fill="#1f3b4d" stroke="#00ADD8" stroke-width="1"/>
+  <text x="82" y="116" font-family="Roboto Mono, monospace" font-size="10" fill="#00ADD8" text-anchor="middle">n := 0</text>
+
+  <!-- flecha down hacia closure -->
+  <line x1="82" y1="122" x2="82" y2="138" stroke="#00ADD8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="78,136 82,144 86,136" fill="#00ADD8"/>
+
+  <!-- closure box -->
+  <rect x="30" y="148" width="258" height="106" rx="3" fill="#0d1117" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="159" y="163" font-family="Inter, Roboto, sans-serif" font-size="8.5" fill="#ffa657" text-anchor="middle">closure retornado</text>
+
+  <text x="40" y="179" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">func</text>
+  <text x="64" y="179" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">() </text>
+  <text x="76" y="179" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="94" y="179" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> {</text>
+  <text x="40" y="193" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  n++</text>
+  <!-- flecha de n++ de vuelta al n -->
+  <line x1="62" y1="188" x2="82" y2="148" stroke="#ffa657" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="40" y="207" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  return</text>
+  <text x="84" y="207" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> n</text>
+  <text x="40" y="220" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">}</text>
+  <text x="40" y="234" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// captura 'n' del entorno padre</text>
+  <text x="40" y="247" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// 'n' vive en el heap</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA CENTRAL: Entornos independientes               -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="318" y="48" width="284" height="224" rx="6" fill="#0f2535" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="460" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#3fb950" text-anchor="middle">Entornos Independientes</text>
+
+  <!-- contarA -->
+  <rect x="328" y="74" width="124" height="70" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="390" y="88" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">contarA</text>
+  <text x="338" y="103" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">n = 0</text>
+  <text x="338" y="116" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">su propio n</text>
+  <text x="338" y="130" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">en el heap</text>
+
+  <!-- contarB -->
+  <rect x="466" y="74" width="126" height="70" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="529" y="88" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">contarB</text>
+  <text x="476" y="103" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">n = 0</text>
+  <text x="476" y="116" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">su propio n</text>
+  <text x="476" y="130" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">en el heap</text>
+
+  <!-- separador -->
+  <line x1="458" y1="74" x2="458" y2="144" stroke="#21262d" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="460" y="158" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">NO comparten estado</text>
+
+  <!-- ejecución -->
+  <rect x="328" y="166" width="264" height="98" rx="4" fill="#161b22"/>
+  <text x="460" y="180" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#ffa657" text-anchor="middle">Secuencia de ejecución</text>
+  <text x="338" y="196" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">contarA() </text>
+  <text x="406" y="196" font-family="Roboto Mono, monospace" font-size="9.5" fill="#3fb950">→ 1</text>
+  <text x="338" y="209" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">contarA() </text>
+  <text x="406" y="209" font-family="Roboto Mono, monospace" font-size="9.5" fill="#3fb950">→ 2</text>
+  <text x="338" y="222" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">contarB() </text>
+  <text x="406" y="222" font-family="Roboto Mono, monospace" font-size="9.5" fill="#3fb950">→ 1</text>
+  <text x="452" y="222" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">← su propio entorno</text>
+  <text x="338" y="235" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">contarA() </text>
+  <text x="406" y="235" font-family="Roboto Mono, monospace" font-size="9.5" fill="#3fb950">→ 3</text>
+  <text x="452" y="235" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">← A continúa</text>
+  <text x="338" y="250" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// A y B NO se afectan mutuamente</text>
+  <text x="338" y="263" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// cada call a contadorNuevo() → heap nuevo</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA DERECHA: Bug de captura en bucle              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="616" y="48" width="290" height="224" rx="6" fill="#0f2535" stroke="#f85149" stroke-width="1.5"/>
+  <text x="761" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#f85149" text-anchor="middle">Bug: Captura en Bucle</text>
+
+  <!-- mal -->
+  <rect x="626" y="74" width="270" height="82" rx="4" fill="#161b22"/>
+  <text x="726" y="88" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#f85149" text-anchor="middle">❌ Go &lt; 1.22 — todos ven i=5</text>
+  <text x="636" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">for</text>
+  <text x="654" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> i := 0; i &lt; 5; i++ {</text>
+  <text x="636" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  funcs[i] = </text>
+  <text x="694" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">func</text>
+  <text x="718" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">() {</text>
+  <text x="636" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">    fmt.Println(i) </text>
+  <text x="750" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#f85149">// i compartida</text>
+  <text x="636" y="142" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  } }</text>
+  <text x="636" y="148" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// imprime: 5 5 5 5 5</text>
+
+  <!-- fix 1 -->
+  <rect x="626" y="162" width="270" height="50" rx="4" fill="#161b22"/>
+  <text x="726" y="176" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">✅ Fix — copiar variable local</text>
+  <text x="636" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">for</text>
+  <text x="654" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> i := 0; i &lt; 5; i++ {</text>
+  <text x="636" y="204" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  i := i </text>
+  <text x="684" y="204" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// nueva var local</text>
+
+  <!-- fix 2 go 1.22 -->
+  <rect x="626" y="218" width="270" height="46" rx="4" fill="#161b22"/>
+  <text x="726" y="232" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">✅ Go 1.22+ — corregido automáticamente</text>
+  <text x="636" y="248" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">for</text>
+  <text x="654" y="248" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> i := </text>
+  <text x="686" y="248" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">range</text>
+  <text x="720" y="248" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> 5 { </text>
+  <text x="748" y="248" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// i nuevo c/iteración</text>
+  <text x="636" y="258" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// Go 1.22: cada iteración tiene su propia 'i'</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PANEL INFERIOR: Patrones de closure                    -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="14" y="288" width="892" height="240" rx="6" fill="#0f2535" stroke="#8b949e" stroke-width="1"/>
+  <text x="460" y="308" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#e6edf3" text-anchor="middle">Patrones de Uso de Closures</text>
+
+  <!-- Generador -->
+  <rect x="24" y="318" width="206" height="198" rx="4" fill="#161b22"/>
+  <text x="127" y="334" font-family="Inter, Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#00ADD8" text-anchor="middle">Generador de IDs</text>
+  <text x="34" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">func</text>
+  <text x="56" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> nuevoGenerador()</text>
+  <text x="34" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">    func</text>
+  <text x="68" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">() </text>
+  <text x="80" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="98" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> {</text>
+  <text x="34" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  id := 0</text>
+  <text x="34" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#ff7b72">  return func</text>
+  <text x="100" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">() </text>
+  <text x="112" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="130" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> {</text>
+  <text x="34" y="402" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">    id++</text>
+  <text x="34" y="415" font-family="Roboto Mono, monospace" font-size="9" fill="#ff7b72">    return</text>
+  <text x="82" y="415" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> id</text>
+  <text x="34" y="428" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  } }</text>
+  <text x="34" y="444" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">// uso:</text>
+  <text x="34" y="457" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">gen := nuevoGenerador()</text>
+  <text x="34" y="470" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">gen() </text>
+  <text x="72" y="470" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">→ 1</text>
+  <text x="34" y="483" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">gen() </text>
+  <text x="72" y="483" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">→ 2</text>
+
+  <!-- Multiplicador (generador de funciones) -->
+  <rect x="240" y="318" width="206" height="198" rx="4" fill="#161b22"/>
+  <text x="343" y="334" font-family="Inter, Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#ffa657" text-anchor="middle">Fábrica de Funciones</text>
+  <text x="250" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">func</text>
+  <text x="272" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> multiplBy(f </text>
+  <text x="344" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="362" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">)</text>
+  <text x="250" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">    func</text>
+  <text x="284" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">(</text>
+  <text x="290" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="308" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">) </text>
+  <text x="320" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="338" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> {</text>
+  <text x="250" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#ff7b72">  return func</text>
+  <text x="316" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">(n </text>
+  <text x="334" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="352" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">) </text>
+  <text x="364" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">int</text>
+  <text x="382" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">{</text>
+  <text x="250" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#ff7b72">    return</text>
+  <text x="298" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> n * f</text>
+  <text x="250" y="402" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  } }</text>
+  <text x="250" y="418" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">// 'f' queda capturado</text>
+  <text x="250" y="431" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">x3 := multiplBy(3)</text>
+  <text x="250" y="444" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">x5 := multiplBy(5)</text>
+  <text x="250" y="457" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">x3(4) </text>
+  <text x="292" y="457" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">→ 12</text>
+  <text x="250" y="470" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">x5(4) </text>
+  <text x="292" y="470" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">→ 20</text>
+
+  <!-- Middleware -->
+  <rect x="456" y="318" width="218" height="198" rx="4" fill="#161b22"/>
+  <text x="565" y="334" font-family="Inter, Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#3fb950" text-anchor="middle">Middleware / Decorador</text>
+  <text x="466" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">func</text>
+  <text x="488" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3"> conLog(nombre </text>
+  <text x="574" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">string</text>
+  <text x="610" y="350" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">,</text>
+  <text x="466" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  fn </text>
+  <text x="488" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">func</text>
+  <text x="512" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">()) </text>
+  <text x="532" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">func</text>
+  <text x="556" y="363" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">() {</text>
+  <text x="466" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#ff7b72">  return func</text>
+  <text x="530" y="376" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">() {</text>
+  <text x="466" y="389" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">    fmt.Println("→", nombre)</text>
+  <text x="466" y="402" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">    fn()</text>
+  <text x="466" y="415" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">    fmt.Println("✓", nombre)</text>
+  <text x="466" y="428" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  } }</text>
+  <text x="466" y="444" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">// 'nombre' y 'fn' capturados</text>
+  <text x="466" y="457" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">guardar := conLog("guardar",</text>
+  <text x="466" y="470" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">  func() { /* lógica */ })</text>
+  <text x="466" y="483" font-family="Roboto Mono, monospace" font-size="9" fill="#e6edf3">guardar()</text>
+  <text x="466" y="496" font-family="Roboto Mono, monospace" font-size="9" fill="#8b949e">// → guardar / ✓ guardar</text>
+
+  <!-- Reglas clave -->
+  <rect x="684" y="318" width="222" height="198" rx="4" fill="#161b22"/>
+  <text x="795" y="334" font-family="Inter, Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#ffa657" text-anchor="middle">Reglas Clave</text>
+  <text x="694" y="352" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950">✓</text>
+  <text x="706" y="352" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Captura por referencia</text>
+  <text x="706" y="364" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">  (no por copia)</text>
+  <text x="694" y="380" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950">✓</text>
+  <text x="706" y="380" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Variables en heap</text>
+  <text x="706" y="392" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">  (escape analysis)</text>
+  <text x="694" y="408" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#3fb950">✓</text>
+  <text x="706" y="408" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Cada call crea entorno</text>
+  <text x="706" y="420" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">  independiente</text>
+  <line x1="694" y1="430" x2="896" y2="430" stroke="#21262d" stroke-width="1"/>
+  <text x="694" y="446" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#f85149">✗</text>
+  <text x="706" y="446" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Bug: captura de</text>
+  <text x="706" y="458" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">  variable de bucle</text>
+  <text x="706" y="470" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">  (Go &lt; 1.22)</text>
+  <line x1="694" y1="478" x2="896" y2="478" stroke="#21262d" stroke-width="1"/>
+  <text x="694" y="494" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#ffa657">→</text>
+  <text x="706" y="494" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Fix: </text>
+  <text x="728" y="494" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">i := i</text>
+  <text x="764" y="494" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> o Go 1.22+</text>
+  <text x="694" y="508" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#ffa657">→</text>
+  <text x="706" y="508" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3"> Go 1.22: </text>
+  <text x="748" y="508" font-family="Roboto Mono, monospace" font-size="9" fill="#79c0ff">range n</text>
+</svg>

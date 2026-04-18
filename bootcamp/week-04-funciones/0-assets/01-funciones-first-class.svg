@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="920" height="540">
+  <rect width="920" height="540" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="460" y="32" font-family="Inter, Roboto, sans-serif" font-size="15" font-weight="bold" fill="#e6edf3" text-anchor="middle">Funciones como Valores de Primera Clase en Go</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA IZQUIERDA: Declaración y múltiples retornos    -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="14" y="48" width="278" height="224" rx="6" fill="#0f2535" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="153" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#00ADD8" text-anchor="middle">Múltiples Retornos</text>
+
+  <!-- func divide -->
+  <rect x="24" y="74" width="258" height="82" rx="4" fill="#161b22"/>
+  <text x="34" y="90" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="62" y="90" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> divide(a, b </text>
+  <text x="150" y="90" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">float64</text>
+  <text x="196" y="90" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">)</text>
+  <text x="34" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">    (</text>
+  <text x="55" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">float64</text>
+  <text x="101" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">, </text>
+  <text x="113" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">error</text>
+  <text x="140" y="103" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) {</text>
+  <text x="34" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  </text>
+  <text x="40" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">if</text>
+  <text x="54" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> b == 0 { </text>
+  <text x="112" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">return</text>
+  <text x="148" y="116" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> 0, err }</text>
+  <text x="34" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  return</text>
+  <text x="79" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> a/b, </text>
+  <text x="112" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">nil</text>
+  <text x="134" y="129" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> }</text>
+  <!-- flechas retorno -->
+  <rect x="24" y="163" width="258" height="36" rx="4" fill="#161b22"/>
+  <text x="34" y="178" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">res, err := divide(10, 3)</text>
+  <text x="34" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">if</text>
+  <text x="48" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> err != </text>
+  <text x="89" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">nil</text>
+  <text x="110" y="191" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> { ... }</text>
+
+  <!-- Retornos nombrados -->
+  <text x="153" y="218" font-family="Inter, Roboto, sans-serif" font-size="10" font-weight="bold" fill="#ffa657" text-anchor="middle">Retornos Nombrados</text>
+  <rect x="24" y="224" width="258" height="40" rx="4" fill="#161b22"/>
+  <text x="34" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="62" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> minMax(nums []</text>
+  <text x="168" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="186" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">)</text>
+  <text x="34" y="251" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">    (min, max </text>
+  <text x="112" y="251" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="130" y="251" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) { ... }</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA CENTRAL: Variádicas                            -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="306" y="48" width="302" height="224" rx="6" fill="#0f2535" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="457" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#3fb950" text-anchor="middle">Funciones Variádicas</text>
+
+  <!-- Diagrama: nums ...int -->
+  <rect x="316" y="74" width="282" height="60" rx="4" fill="#161b22"/>
+  <text x="326" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="354" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> sum(nums </text>
+  <text x="422" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ffa657">...</text>
+  <text x="438" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="456" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) </text>
+  <text x="468" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="486" y="88" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> {</text>
+  <text x="326" y="101" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">  // nums es []int dentro</text>
+  <text x="326" y="114" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  </text>
+  <text x="332" y="114" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">for</text>
+  <text x="354" y="114" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> _, n := </text>
+  <text x="406" y="114" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">range</text>
+  <text x="440" y="114" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> nums { ... }</text>
+
+  <!-- Llamadas -->
+  <text x="457" y="150" font-family="Inter, Roboto, sans-serif" font-size="10" font-weight="bold" fill="#ffa657" text-anchor="middle">Formas de llamar</text>
+  <rect x="316" y="156" width="282" height="108" rx="4" fill="#161b22"/>
+  <!-- valores individuales -->
+  <text x="326" y="170" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// valores individuales</text>
+  <text x="326" y="183" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">sum(1, 2, 3)        </text>
+  <text x="470" y="183" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">→ 6</text>
+  <!-- cero args -->
+  <text x="326" y="196" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">sum()               </text>
+  <text x="470" y="196" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">→ 0</text>
+  <!-- expansión slice -->
+  <text x="326" y="212" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// expansión de slice</text>
+  <text x="326" y="225" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">ns := []</text>
+  <text x="374" y="225" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="392" y="225" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">{4, 5, 6}</text>
+  <text x="326" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">sum(ns</text>
+  <text x="362" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ffa657">...</text>
+  <text x="378" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">)          </text>
+  <text x="470" y="238" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">→ 15</text>
+  <text x="326" y="255" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// el operador ... expande el slice</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- COLUMNA DERECHA: Funciones como valores                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="622" y="48" width="284" height="224" rx="6" fill="#0f2535" stroke="#ffa657" stroke-width="1.5"/>
+  <text x="764" y="67" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#ffa657" text-anchor="middle">Funciones como Valores</text>
+
+  <!-- tipo de función -->
+  <rect x="632" y="74" width="264" height="26" rx="4" fill="#161b22"/>
+  <text x="642" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">type</text>
+  <text x="666" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> transformFn </text>
+  <text x="752" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="776" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">(</text>
+  <text x="782" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="800" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) </text>
+  <text x="812" y="91" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+
+  <!-- 3 usos -->
+  <text x="764" y="116" font-family="Inter, Roboto, sans-serif" font-size="10" font-weight="bold" fill="#ffa657" text-anchor="middle">3 usos de primera clase</text>
+  <rect x="632" y="122" width="264" height="142" rx="4" fill="#161b22"/>
+
+  <!-- 1. Asignar a variable -->
+  <text x="642" y="137" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">① Asignar a variable</text>
+  <text x="642" y="150" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">op := doble</text>
+  <text x="642" y="163" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">op(7) </text>
+  <text x="684" y="163" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">→ 14</text>
+
+  <!-- 2. Pasar como argumento -->
+  <line x1="642" y1="172" x2="886" y2="172" stroke="#21262d" stroke-width="1"/>
+  <text x="642" y="184" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">② Pasar como argumento (HOF)</text>
+  <text x="642" y="197" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">aplicar(nums, doble)</text>
+  <text x="642" y="210" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// fn es parámetro de tipo func</text>
+
+  <!-- 3. Función anónima -->
+  <line x1="642" y1="218" x2="886" y2="218" stroke="#21262d" stroke-width="1"/>
+  <text x="642" y="230" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#8b949e">③ Función anónima (literal)</text>
+  <text x="642" y="243" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">aplicar(nums, </text>
+  <text x="642" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  func</text>
+  <text x="674" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">(n </text>
+  <text x="692" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="710" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) </text>
+  <text x="722" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="740" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">{ </text>
+  <text x="752" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">return</text>
+  <text x="788" y="256" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> n*n })</text>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PANEL INFERIOR: Tabla de patrones                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <rect x="14" y="288" width="892" height="240" rx="6" fill="#0f2535" stroke="#8b949e" stroke-width="1"/>
+  <text x="460" y="308" font-family="Inter, Roboto, sans-serif" font-size="11" font-weight="bold" fill="#e6edf3" text-anchor="middle">Patrones de Funciones en Go</text>
+
+  <!-- Columna HOF: filtrar -->
+  <rect x="24" y="318" width="420" height="198" rx="4" fill="#161b22"/>
+  <text x="234" y="334" font-family="Inter, Roboto, sans-serif" font-size="10" font-weight="bold" fill="#3fb950" text-anchor="middle">HOF: filtrar / transformar / reducir</text>
+  <text x="34" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="58" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> filtrar(nums []</text>
+  <text x="150" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="168" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">, pred </text>
+  <text x="204" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">func</text>
+  <text x="228" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">(</text>
+  <text x="234" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="252" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) </text>
+  <text x="264" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">bool</text>
+  <text x="288" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) []</text>
+  <text x="310" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="328" y="350" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> {</text>
+
+  <text x="34" y="365" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  res := make([]</text>
+  <text x="136" y="365" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="154" y="365" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">, 0, len(nums))</text>
+  <text x="34" y="378" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  for</text>
+  <text x="58" y="378" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> _, n := </text>
+  <text x="106" y="378" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">range</text>
+  <text x="140" y="378" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> nums {</text>
+  <text x="34" y="391" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">    if</text>
+  <text x="58" y="391" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> pred(n) { res = append(res, n) }</text>
+  <text x="34" y="404" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">  }</text>
+  <text x="34" y="417" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  return</text>
+  <text x="78" y="417" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> res</text>
+  <text x="34" y="430" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">}</text>
+
+  <!-- uso -->
+  <text x="34" y="448" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// Uso:</text>
+  <text x="34" y="461" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">pares := filtrar(nums, </text>
+  <text x="34" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">  func</text>
+  <text x="58" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">(n </text>
+  <text x="76" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">int</text>
+  <text x="94" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3">) </text>
+  <text x="106" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#79c0ff">bool</text>
+  <text x="130" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> { </text>
+  <text x="148" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#ff7b72">return</text>
+  <text x="184" y="474" font-family="Roboto Mono, monospace" font-size="9.5" fill="#e6edf3"> n%2==0 })</text>
+  <text x="34" y="490" font-family="Roboto Mono, monospace" font-size="9.5" fill="#8b949e">// → [2 4 6 8 10]</text>
+
+  <!-- Columna: cuándo usar qué -->
+  <rect x="458" y="318" width="438" height="198" rx="4" fill="#161b22"/>
+  <text x="677" y="334" font-family="Inter, Roboto, sans-serif" font-size="10" font-weight="bold" fill="#ffa657" text-anchor="middle">¿Cuándo usar cada patrón?</text>
+
+  <!-- tabla -->
+  <line x1="458" y1="343" x2="896" y2="343" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="357" font-family="Inter, Roboto, sans-serif" font-size="9.5" fill="#00ADD8">Patrón</text>
+  <text x="640" y="357" font-family="Inter, Roboto, sans-serif" font-size="9.5" fill="#00ADD8">Cuándo</text>
+
+  <line x1="458" y1="363" x2="896" y2="363" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="377" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">múltiples retornos</text>
+  <text x="640" y="377" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">retornar resultado + error</text>
+
+  <line x1="458" y1="383" x2="896" y2="383" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="397" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">retornos nombrados</text>
+  <text x="640" y="397" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">función corta, nombres documentan</text>
+
+  <line x1="458" y1="403" x2="896" y2="403" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="417" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">variádica</text>
+  <text x="640" y="417" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">número variable de args del mismo tipo</text>
+
+  <line x1="458" y1="423" x2="896" y2="423" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="437" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">HOF</text>
+  <text x="640" y="437" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">abstraer comportamiento que varía</text>
+
+  <line x1="458" y1="443" x2="896" y2="443" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="457" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">función anónima</text>
+  <text x="640" y="457" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">lógica corta usada una sola vez</text>
+
+  <line x1="458" y1="463" x2="896" y2="463" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="477" font-family="Roboto Mono, monospace" font-size="9" fill="#3fb950">type funcType</text>
+  <text x="640" y="477" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">reutilizar firma en varios lugares</text>
+
+  <line x1="458" y1="483" x2="896" y2="483" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="497" font-family="Roboto Mono, monospace" font-size="9" fill="#f85149">NO variádica</text>
+  <text x="640" y="497" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">si el número de args es siempre fijo</text>
+
+  <line x1="458" y1="503" x2="896" y2="503" stroke="#21262d" stroke-width="1"/>
+  <text x="468" y="517" font-family="Roboto Mono, monospace" font-size="9" fill="#f85149">NO ignorar error</text>
+  <text x="640" y="517" font-family="Inter, Roboto, sans-serif" font-size="9" fill="#e6edf3">nunca usar _ para errores reales</text>
+</svg>

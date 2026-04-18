@@ -74,16 +74,16 @@
 
 ## Semana 04 — Funciones
 
-- [ ] `README.md` de la semana
-- [ ] `rubrica-evaluacion.md`
-- [ ] `0-assets/` (SVG de funciones first-class, closures)
-- [ ] `1-teoria/01-funciones-y-multiples-retornos.md`
-- [ ] `1-teoria/02-closures-y-funciones-de-orden-superior.md`
-- [ ] `2-practicas/practica-01-multiples-retornos/`
-- [ ] `2-practicas/practica-02-closures/`
-- [ ] `3-proyecto/`
-- [ ] `4-recursos/`
-- [ ] `5-glosario/`
+- [x] `README.md` de la semana
+- [x] `rubrica-evaluacion.md`
+- [x] `0-assets/` (01-funciones-first-class.svg, 02-closures-scope.svg)
+- [x] `1-teoria/01-funciones-y-multiples-retornos.md`
+- [x] `1-teoria/02-closures-y-funciones-de-orden-superior.md`
+- [x] `2-practicas/practica-01-multiples-retornos/`
+- [x] `2-practicas/practica-02-closures/`
+- [x] `3-proyecto/`
+- [x] `4-recursos/`
+- [x] `5-glosario/`
 
 ---
 
