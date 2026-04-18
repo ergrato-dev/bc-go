@@ -1,6 +1,6 @@
 # Plan de Trabajo — bc-go Bootcamp
 
-> Actualizado: 2026-04-18
+> Actualizado: 2026-04-18 — comentarios académicos (qué/para qué/impacto) aplicados a semana 01
 
 ---
 
