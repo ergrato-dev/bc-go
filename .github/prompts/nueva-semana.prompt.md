@@ -23,7 +23,7 @@ Crea los archivos **en este orden exacto**. Espera confirmación entre secciones
 `bootcamp/<slug>/README.md`
 
 ### 2. Rúbrica de evaluación
-`bootcamp/<slug>/rubrica-evaluacion.md`  
+`bootcamp/<slug>/rubrica-evaluacion.md`
 Consulta el formato de los repos de ejemplo (bc-sql, bc-fastapi): conocimiento 30 % / desempeño 40 % / producto 30 %.
 
 ### 3. Archivos de teoría (numerados 01-, 02-, …)
@@ -31,7 +31,7 @@ Consulta el formato de los repos de ejemplo (bc-sql, bc-fastapi): conocimiento 3
 bootcamp/<slug>/1-teoria/01-<concepto-principal>.md   ← mínimo 150 líneas
 bootcamp/<slug>/1-teoria/02-<segundo-concepto>.md     ← si aplica
 ```
-Escribe primero el contenido completo de cada archivo de teoría.  
+Escribe primero el contenido completo de cada archivo de teoría.
 Deja marcadores `<!-- SVG: nombre-descriptivo.svg -->` donde irá cada diagrama.
 
 ### 4. Assets SVG (numerados en orden lógico de lectura 01-, 02-, …)
@@ -39,7 +39,7 @@ Deja marcadores `<!-- SVG: nombre-descriptivo.svg -->` donde irá cada diagrama.
 bootcamp/<slug>/0-assets/01-<concepto-principal>.svg
 bootcamp/<slug>/0-assets/02-<segundo-concepto>.svg    ← si aplica
 ```
-Crea cada SVG y reemplaza los marcadores de la teoría por el enlace real:  
+Crea cada SVG y reemplaza los marcadores de la teoría por el enlace real:
 `![Descripción](../0-assets/01-nombre.svg)`
 
 ### 5. Prácticas
@@ -64,7 +64,7 @@ bootcamp/<slug>/4-recursos/webgrafia/README.md
 ```
 
 ### 8. Glosario
-`bootcamp/<slug>/5-glosario/README.md`  
+`bootcamp/<slug>/5-glosario/README.md`
 Términos clave ordenados alfabéticamente con formato qué / para qué / impacto.
 
 ## Reglas críticas

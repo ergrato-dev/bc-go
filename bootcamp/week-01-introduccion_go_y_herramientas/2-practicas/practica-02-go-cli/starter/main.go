@@ -1,6 +1,8 @@
 // Paquete main: qué  → punto de entrada del programa ejecutable.
 // Para qué → junto con func main(), indica al compilador que este directorio
-//             produce un binario, no una librería.
+//
+//	produce un binario, no una librería.
+//
 // Impacto   → sin 'package main', go build no genera ningún ejecutable.
 package main
 
@@ -111,9 +113,12 @@ func main() {
 
 // formatGreeting: qué  → construye el mensaje de saludo con el nombre recibido.
 // Para qué → centraliza el formato del saludo en un único lugar;
-//             si el formato cambia, solo se modifica aquí.
+//
+//	si el formato cambia, solo se modifica aquí.
+//
 // Impacto   → al ser una función pura (sin side effects), es trivialmente
-//             testeable con go test sin necesidad de mocks.
+//
+//	testeable con go test sin necesidad de mocks.
 func formatGreeting(name string) string {
 	// fmt.Sprintf: qué  → formatea un string sin imprimirlo (a diferencia de Printf).
 	// Para qué → construir el mensaje antes de decidir cómo entregarlo
